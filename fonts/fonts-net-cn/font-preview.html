@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精选字体预览 · XHSVibeUISkill</title>
+<style>
+@font-face { font-family: '演示悠然小楷'; src: url('extracted/YanShiYouRanXiaoKai/YanShiYouRanXiaoKai-2.ttf'); }
+@font-face { font-family: '演示夏行楷'; src: url('extracted/YanShiXiaXingKai/YanShiXiaXingKai-2.ttf'); }
+@font-face { font-family: '云峰静龙行书'; src: url('extracted/YunFengJingLongXingShu/YunFengJingLongXingShu-2.ttf'); }
+@font-face { font-family: '正风毛笔'; src: url('extracted/ZhengFengMaoBi-Bold/MasaFont-Bold-2.ttf'); }
+@font-face { font-family: '三极泼墨体'; src: url('extracted/SanJiPoMoTi/SanJiPoMoTi-2.ttf'); }
+@font-face { font-family: '峄山碑篆体'; src: url('extracted/ShanBeiZhuanTi/YiShanBeiZhuanTi.ttf'); }
+@font-face { font-family: '令东齐伋复刻体'; src: url('extracted/LingDongQiCheChunTang/LingDongQiCheChunTang-2.ttf'); }
+@font-face { font-family: '问藏书房'; src: url('extracted/WenCangShuFang/WenCangShuFang-2.ttf'); }
+@font-face { font-family: '思源宋体'; src: url('extracted/SiYuanSongTiRegular/SourceHanSerifCN-Regular-1.otf'); font-weight: 400; }
+@font-face { font-family: '思源宋体'; src: url('extracted/SiYuanSongTiRegular/SourceHanSerifCN-Bold-2.otf'); font-weight: 700; }
+@font-face { font-family: '汤宪滨宋'; src: url('extracted/TangXianBinSong·MianFeiShangYong/TangXianBinSong-2.otf'); }
+@font-face { font-family: '杨任东竹石体'; src: url('extracted/YangRenDongZhuShiTi-Regular/YangRenDongZhuShiTi-Regular-2.ttf'); }
+@font-face { font-family: '优设标题圆'; src: url('extracted/YouSheBiaoTiYuan/YouSheBiaoTiYuan-2.otf'); }
+@font-face { font-family: '站酷庆科黄油体'; src: url('extracted/ZhanKuQingKeHuangYouTi/ZhanKuQingKeHuangYouTi-2.ttf'); }
+@font-face { font-family: '仓耳小丸子'; src: url('extracted/CangErXiaoWanZi/CangErXiaoWanZi-2.ttf'); }
+@font-face { font-family: '小可奶酪体'; src: url('extracted/XiaoKeNaiLaoTi/XiaoKeNaiLaoTiShangYongMianFei@QingKeZiTi-2.ttf'); }
+@font-face { font-family: '猕猴桃圆'; src: url('extracted/HouTaoYuan-M/KiwiMaru-Medium-2.ttf'); }
+@font-face { font-family: '德拉黑体'; src: url('extracted/DeLaHeiTi/DelaGothicOne-Regular-2.ttf'); }
+@font-face { font-family: '优设标题黑'; src: url('extracted/YouSheBiaoTiHei/YouSheBiaoTiHei-2.ttf'); }
+@font-face { font-family: '庞门正道标题体'; src: url('extracted/PangMenZhengDaoBiaoTiTiMianFeiBan/PangMenZhengDaoBiaoTiTiMianFeiBan-2.ttf'); }
+@font-face { font-family: '标小智无界黑'; src: url('extracted/BiaoXiaoZhiWuJieHei/LogoSCUnboundedSans-Regular-2.ttf'); }
+@font-face { font-family: '文道潮黑'; src: url('extracted/WenDaoChaoHei/WenDaoChaoHei-2.ttf'); }
+@font-face { font-family: '创客贴金刚体'; src: url('extracted/ChuangKeTieJinGangTi/ChuangKeTieJinGangTi-2.otf'); }
+@font-face { font-family: '仓耳舒圆体'; src: url('extracted/CangErShuYuanTiW03/CangErShuYuanTiW03-2.ttf'); }
+@font-face { font-family: '千图小兔体'; src: url('extracted/QianTuXiaoTuTi/QianTuXiaoTuTi-2.ttf'); }
+@font-face { font-family: '沐瑶软笔手写体'; src: url('extracted/YaoRuanBiShouXieTi/Muyao-Softbrush-2.ttf'); }
+@font-face { font-family: '寒蝉高黑体'; src: url('extracted/HanChanGaoHeiTi/HanChanGaoHeiTi-2.otf'); }
+@font-face { font-family: '精品点阵体'; src: url('extracted/JingPinDianZhenTi/JingPinDianZhenTi7x7-2.ttf'); }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: system-ui, sans-serif;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+.container { max-width: 1200px; margin: 0 auto; }
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: #f8fafc;
+}
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 48px;
+  font-size: 16px;
+}
+.style-section {
+  margin-bottom: 56px;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.style-header {
+  padding: 20px 32px;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #1e293b;
+}
+.font-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1px;
+  background: #1e293b;
+}
+.font-card {
+  padding: 24px 32px;
+  background: #0f172a;
+}
+.font-name {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+  font-family: system-ui;
+}
+.font-sample {
+  font-size: 32px;
+  line-height: 1.4;
+  color: #f1f5f9;
+  margin-bottom: 6px;
+}
+.font-sample-sm {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+.tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 8px;
+  font-family: system-ui;
+}
+
+/* 风格颜色 */
+.guofeng .style-header { background: #451a03; color: #fbbf24; }
+.guofeng .tag { background: #78350f; color: #fcd34d; }
+.minimal .style-header { background: #1c1917; color: #d6d3d1; }
+.minimal .tag { background: #292524; color: #a8a29e; }
+.dopamine .style-header { background: #581c87; color: #e879f9; }
+.dopamine .tag { background: #6b21a8; color: #d946ef; }
+.knowledge .style-header { background: #1e1b4b; color: #818cf8; }
+.knowledge .tag { background: #312e81; color: #a5b4fc; }
+.food .style-header { background: #431407; color: #fb923c; }
+.food .tag { background: #7c2d12; color: #fdba74; }
+.ai-daily .style-header { background: #022c22; color: #34d399; }
+.ai-daily .tag { background: #064e3b; color: #6ee7b7; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>XHSVibeUISkill 精选字体预览</h1>
+  <p class="subtitle">27 款免费商用字体 · 6 种风格适配 · fonts.net.cn</p>
+
+  <!-- 古风 guofeng -->
+  <div class="style-section guofeng">
+    <div class="style-header">古风 · guofeng</div>
+    <div class="font-grid">
+      <div class="font-card">
+        <div class="font-name">演示悠然小楷</div>
+        <div class="font-sample" style="font-family:'演示悠然小楷'">山有木兮木有枝</div>
+        <div class="font-sample-sm" style="font-family:'演示悠然小楷'">心悦君兮君不知</div>
+        <span class="tag">副标题 / 正文</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">演示夏行楷</div>
+        <div class="font-sample" style="font-family:'演示夏行楷'">大江东去浪淘尽</div>
+        <div class="font-sample-sm" style="font-family:'演示夏行楷'">千古风流人物</div>
+        <span class="tag">主标题 / 副标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">云峰静龙行书</div>
+        <div class="font-sample" style="font-family:'云峰静龙行书'">龙飞凤舞气如虹</div>
+        <div class="font-sample-sm" style="font-family:'云峰静龙行书'">笔走龙蛇意纵横</div>
+        <span class="tag">主标题装饰</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">正风毛笔</div>
+        <div class="font-sample" style="font-family:'正风毛笔'">浓墨重彩写春秋</div>
+        <div class="font-sample-sm" style="font-family:'正风毛笔'">气吞万里如虎</div>
+        <span class="tag">主标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">三极泼墨体</div>
+        <div class="font-sample" style="font-family:'三极泼墨体'">泼墨挥毫天地间</div>
+        <div class="font-sample-sm" style="font-family:'三极泼墨体'">意在笔先气韵生</div>
+        <span class="tag">装饰 / 标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">峄山碑篆体</div>
+        <div class="font-sample" style="font-family:'峄山碑篆体'">秦风古韵传千载</div>
+        <div class="font-sample-sm" style="font-family:'峄山碑篆体'">篆刻印章用</div>
+        <span class="tag">印章 / 装饰</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">令东齐伋复刻体</div>
+        <div class="font-sample" style="font-family:'令东齐伋复刻体'">古籍刊刻字韵浓</div>
+        <div class="font-sample-sm" style="font-family:'令东齐伋复刻体'">一字一句皆庄重典雅</div>
+        <span class="tag">正文</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">问藏书房</div>
+        <div class="font-sample" style="font-family:'问藏书房'">书卷多情似故人</div>
+        <div class="font-sample-sm" style="font-family:'问藏书房'">晨昏忧乐每相亲</div>
+        <span class="tag">正文 / 副标题</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 极简 minimal -->
+  <div class="style-section minimal">
+    <div class="style-header">极简 · minimal</div>
+    <div class="font-grid">
+      <div class="font-card">
+        <div class="font-name">思源宋体 Regular</div>
+        <div class="font-sample" style="font-family:'思源宋体'">少即是多的设计哲学</div>
+        <div class="font-sample-sm" style="font-family:'思源宋体'">留白本身就是一种语言</div>
+        <span class="tag">正文 / 标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">思源宋体 Bold</div>
+        <div class="font-sample" style="font-family:'思源宋体'; font-weight:700">克制与呼吸</div>
+        <div class="font-sample-sm" style="font-family:'思源宋体'; font-weight:700">精致的排版从字体开始</div>
+        <span class="tag">标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">汤宪滨宋</div>
+        <div class="font-sample" style="font-family:'汤宪滨宋'">文艺气质从笔画流出</div>
+        <div class="font-sample-sm" style="font-family:'汤宪滨宋'">每一笔都克制而优雅</div>
+        <span class="tag">标题 / 正文</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">杨任东竹石体</div>
+        <div class="font-sample" style="font-family:'杨任东竹石体'">竹石清劲如高士</div>
+        <div class="font-sample-sm" style="font-family:'杨任东竹石体'">宁可食无肉不可居无竹</div>
+        <span class="tag">标题</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 多巴胺 dopamine -->
+  <div class="style-section dopamine">
+    <div class="style-header">多巴胺 · dopamine</div>
+    <div class="font-grid">
+      <div class="font-card">
+        <div class="font-name">优设标题圆</div>
+        <div class="font-sample" style="font-family:'优设标题圆'">今天也要元气满满！</div>
+        <div class="font-sample-sm" style="font-family:'优设标题圆'">超级无敌开心</div>
+        <span class="tag">主标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">站酷庆科黄油体</div>
+        <div class="font-sample" style="font-family:'站酷庆科黄油体'">黄油般丝滑的体验</div>
+        <div class="font-sample-sm" style="font-family:'站酷庆科黄油体'">每一笔都充满活力</div>
+        <span class="tag">主标题 / 副标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">仓耳小丸子</div>
+        <div class="font-sample" style="font-family:'仓耳小丸子'">圆滚滚的小丸子来啦</div>
+        <div class="font-sample-sm" style="font-family:'仓耳小丸子'">可爱到犯规的存在呀</div>
+        <span class="tag">正文 / 标签</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">小可奶酪体</div>
+        <div class="font-sample" style="font-family:'小可奶酪体'">甜甜的奶酪味道</div>
+        <div class="font-sample-sm" style="font-family:'小可奶酪体'">像奶酪一样柔软温暖</div>
+        <span class="tag">标签 / 装饰</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">猕猴桃圆</div>
+        <div class="font-sample" style="font-family:'猕猴桃圆'">清新水果味的圆体</div>
+        <div class="font-sample-sm" style="font-family:'猕猴桃圆'">圆润饱满自然舒适</div>
+        <span class="tag">正文</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">德拉黑体</div>
+        <div class="font-sample" style="font-family:'德拉黑体'">超粗哥特冲击力</div>
+        <div class="font-sample-sm" style="font-family:'德拉黑体'">视觉重量感MAX</div>
+        <span class="tag">主标题</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 知识卡 knowledge -->
+  <div class="style-section knowledge">
+    <div class="style-header">知识卡 · knowledge</div>
+    <div class="font-grid">
+      <div class="font-card">
+        <div class="font-name">优设标题黑</div>
+        <div class="font-sample" style="font-family:'优设标题黑'">AI改变世界的5种方式</div>
+        <div class="font-sample-sm" style="font-family:'优设标题黑'">每一个标题都要有冲击力</div>
+        <span class="tag">主标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">庞门正道标题体</div>
+        <div class="font-sample" style="font-family:'庞门正道标题体'">硬核知识干货分享</div>
+        <div class="font-sample-sm" style="font-family:'庞门正道标题体'">醒目大标题专用字体</div>
+        <span class="tag">主标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">标小智无界黑</div>
+        <div class="font-sample" style="font-family:'标小智无界黑'">打破边界的现代黑体</div>
+        <div class="font-sample-sm" style="font-family:'标小智无界黑'">科技与人文的交汇点</div>
+        <span class="tag">正文 / 副标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">文道潮黑</div>
+        <div class="font-sample" style="font-family:'文道潮黑'">潮流趋势一目了然</div>
+        <div class="font-sample-sm" style="font-family:'文道潮黑'">年轻有力的视觉表达</div>
+        <span class="tag">副标题 / 标签</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">创客贴金刚体</div>
+        <div class="font-sample" style="font-family:'创客贴金刚体'">金刚般的力量感</div>
+        <div class="font-sample-sm" style="font-family:'创客贴金刚体'">超重量级标题装饰</div>
+        <span class="tag">标题装饰</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 美食 food -->
+  <div class="style-section food">
+    <div class="style-header">美食 · food</div>
+    <div class="font-grid">
+      <div class="font-card">
+        <div class="font-name">仓耳舒圆体</div>
+        <div class="font-sample" style="font-family:'仓耳舒圆体'">今日份的美味推荐</div>
+        <div class="font-sample-sm" style="font-family:'仓耳舒圆体'">温暖柔软像刚出炉的面包</div>
+        <span class="tag">正文 / 副标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">猕猴桃圆</div>
+        <div class="font-sample" style="font-family:'猕猴桃圆'">新鲜水果沙拉时间</div>
+        <div class="font-sample-sm" style="font-family:'猕猴桃圆'">清新自然的味道扑面而来</div>
+        <span class="tag">正文</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">千图小兔体</div>
+        <div class="font-sample" style="font-family:'千图小兔体'">小兔子最爱吃胡萝卜</div>
+        <div class="font-sample-sm" style="font-family:'千图小兔体'">可爱甜美的卡通标签</div>
+        <span class="tag">标签 / 装饰</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">沐瑶软笔手写体</div>
+        <div class="font-sample" style="font-family:'沐瑶软笔手写体'">手写的温度感食谱</div>
+        <div class="font-sample-sm" style="font-family:'沐瑶软笔手写体'">妈妈的味道从笔尖流出</div>
+        <span class="tag">装饰 / 标注</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">站酷庆科黄油体</div>
+        <div class="font-sample" style="font-family:'站酷庆科黄油体'">黄油曲奇的香气</div>
+        <div class="font-sample-sm" style="font-family:'站酷庆科黄油体'">和美食主题绝配的字体</div>
+        <span class="tag">主标题</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI日报 ai-daily -->
+  <div class="style-section ai-daily">
+    <div class="style-header">AI日报 · ai-daily</div>
+    <div class="font-grid">
+      <div class="font-card">
+        <div class="font-name">优设标题黑</div>
+        <div class="font-sample" style="font-family:'优设标题黑'">GPT-5震撼发布</div>
+        <div class="font-sample-sm" style="font-family:'优设标题黑'">科技头条必须有冲击力</div>
+        <span class="tag">主标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">寒蝉高黑体</div>
+        <div class="font-sample" style="font-family:'寒蝉高黑体'">高瘦锐利的科技感</div>
+        <div class="font-sample-sm" style="font-family:'寒蝉高黑体'">终端界面的现代视觉</div>
+        <span class="tag">标题 / 副标题</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">标小智无界黑</div>
+        <div class="font-sample" style="font-family:'标小智无界黑'">无边界的技术探索</div>
+        <div class="font-sample-sm" style="font-family:'标小智无界黑'">AI Agent自主完成任务</div>
+        <span class="tag">正文 / 标签</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">精品点阵体</div>
+        <div class="font-sample" style="font-family:'精品点阵体'">PIXEL ART 像素世界</div>
+        <div class="font-sample-sm" style="font-family:'精品点阵体'">复古科技感的装饰元素</div>
+        <span class="tag">装饰 / 代码</span>
+      </div>
+      <div class="font-card">
+        <div class="font-name">文道潮黑</div>
+        <div class="font-sample" style="font-family:'文道潮黑'">2024年度AI趋势报告</div>
+        <div class="font-sample-sm" style="font-family:'文道潮黑'">潮流与科技的交汇</div>
+        <span class="tag">副标题</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

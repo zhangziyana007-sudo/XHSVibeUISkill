@@ -1180,6 +1180,272 @@ padding: 28px 48px;
 
 ---
 
+## 07 · 水墨古风 (shuimo)
+
+### 设计语言
+中国水墨画意境 + 极简留白。以墨分五色（焦浓重淡清）为核心，追求「意在笔先、计白当黑」的东方审美。与 guofeng（国潮）的区别：国潮偏朱砂金色、印章装饰、竖排版式；水墨偏灰阶渐变、泼墨飞白、山水意境。
+
+### CSS 变量（必须使用）
+```css
+:root {
+  --xuan: #f7f3ec;         /* 生宣纸色 */
+  --mo-jiao: #1a1a1a;     /* 焦墨 — 最浓 */
+  --mo-nong: #333333;     /* 浓墨 */
+  --mo-zhong: #555555;    /* 重墨 */
+  --mo-dan: #888888;      /* 淡墨 */
+  --mo-qing: #bbbbbb;     /* 清墨 — 最淡 */
+  --qing: #4a7c7c;        /* 青色（点缀） */
+  --zhu: #7a2e2e;         /* 暗朱（少量点缀） */
+  --jin: #8b7355;         /* 古金（边框/线条） */
+}
+```
+
+### 页面背景
+```css
+html, body { background: #e8e2d8; }  /* 旧宣纸外衬 */
+```
+
+### Canvas 背景（水墨宣纸质感 - 必须有）
+```css
+.canvas {
+  background: var(--xuan);
+  color: var(--mo-jiao);
+  box-shadow: 0 2px 4px rgba(26,26,26,0.06), 0 24px 48px -12px rgba(26,26,26,0.15);
+  /* 宣纸纤维纹理 + 淡墨晕染 */
+  background-image:
+    radial-gradient(ellipse at 15% 20%, rgba(74,124,124,0.05), transparent 50%),
+    radial-gradient(ellipse at 85% 75%, rgba(26,26,26,0.04), transparent 45%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+```
+
+### 字体
+
+**字体用途映射**（参考 styleMapping.shuimo）：
+| 用途 | 推荐字体 | 效果 |
+|------|----------|------|
+| 主标题 | 正风毛笔 / 三极泼墨体 / 云峰静龙行书 | 毛笔书法，浓墨磅礴 |
+| 副标题 | 演示悠然小楷 / 演示夏行楷 | 小楷行楷，文人雅致 |
+| 正文 | 问藏书房 / 令东齐伋复刻体 / LXGW WenKai | 古籍风正文 |
+| 装饰 | 峄山碑篆体 / 三极泼墨体 | 篆刻/飞白 |
+
+```css
+body { font-family: '问藏书房', 'LXGW WenKai', 'Noto Serif SC', serif; }
+h1, .title { font-family: '正风毛笔', '三极泼墨体', 'Ma Shan Zheng', cursive; }
+h2, .subtitle { font-family: '演示悠然小楷', '演示夏行楷', serif; }
+.seal-text { font-family: '峄山碑篆体', serif; }
+```
+Google Fonts 引入（备用）：
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700;900&display=swap" />
+```
+本地字体（核心 — 必须引入）：
+```css
+@font-face { font-family: '正风毛笔'; src: url('../fonts/fonts-net-cn/正风毛笔 Bold/MasaFont-Bold-2.ttf'); }
+@font-face { font-family: '三极泼墨体'; src: url('../fonts/fonts-net-cn/三极泼墨体/SanJiPoMoTi-2.ttf'); }
+@font-face { font-family: '云峰静龙行书'; src: url('../fonts/fonts-net-cn/云峰静龙行书/YunFengJingLongXingShu-2.ttf'); }
+@font-face { font-family: '演示悠然小楷'; src: url('../fonts/fonts-net-cn/演示悠然小楷/YanShiYouRanXiaoKai-2.ttf'); }
+@font-face { font-family: '演示夏行楷'; src: url('../fonts/fonts-net-cn/演示夏行楷/YanShiXiaXingKai-2.ttf'); }
+@font-face { font-family: '问藏书房'; src: url('../fonts/fonts-net-cn/问藏书房/WenCangShuFang-2.ttf'); }
+@font-face { font-family: '令东齐伋复刻体'; src: url('../fonts/fonts-net-cn/令东齐伋复刻体/LingDongQiCheChunTang-2.ttf'); }
+@font-face { font-family: '峄山碑篆体'; src: url('../fonts/fonts-net-cn/峄山碑篆体/YiShanBeiZhuanTi.ttf'); }
+@font-face { font-family: 'LXGW WenKai'; src: url('../fonts/LXGWWenKai-Regular.ttf'); }
+```
+
+### 核心组件
+
+**泼墨标题（.splash-title）** — 水墨风的灵魂，大气写意：
+```css
+.splash-title {
+  font-family: '正风毛笔', '三极泼墨体', cursive;
+  font-size: 120px;
+  color: var(--mo-jiao);
+  text-shadow: 2px 2px 8px rgba(26,26,26,0.2);
+  position: relative;
+}
+/* 飞白效果装饰 */
+.splash-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; left: 10%;
+  width: 80%; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--mo-dan), var(--mo-qing), transparent);
+}
+```
+
+**墨迹装饰（.ink-splash）** — 泼墨飞溅效果：
+```css
+.ink-splash {
+  position: absolute;
+  width: 200px; height: 200px;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  background: radial-gradient(ellipse, rgba(26,26,26,0.08), transparent 70%);
+  filter: blur(2px);
+}
+```
+
+**山水剪影（.mountain-silhouette）** — 底部/背景装饰：
+```css
+.mountain-silhouette {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 240px;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(26,26,26,0.02) 30%,
+    rgba(26,26,26,0.06) 60%,
+    rgba(26,26,26,0.1) 100%
+  );
+  clip-path: polygon(
+    0% 100%, 0% 65%, 8% 55%, 15% 60%, 22% 45%, 30% 50%,
+    38% 35%, 45% 40%, 52% 28%, 58% 35%, 65% 22%, 72% 30%,
+    78% 25%, 85% 38%, 92% 30%, 100% 45%, 100% 100%
+  );
+  opacity: 0.6;
+}
+```
+
+**墨线分割（.ink-divider）**：
+```css
+.ink-divider {
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--mo-qing) 15%,
+    var(--mo-dan) 40%,
+    var(--mo-zhong) 50%,
+    var(--mo-dan) 60%,
+    var(--mo-qing) 85%,
+    transparent 100%
+  );
+  margin: 32px 0;
+}
+```
+
+**印章（.shuimo-seal）** — 比国潮印章更素雅：
+```css
+.shuimo-seal {
+  font-family: '峄山碑篆体', serif;
+  writing-mode: vertical-rl;
+  border: 2px solid var(--zhu);
+  color: var(--zhu);
+  padding: 16px 10px;
+  letter-spacing: 10px;
+  font-size: 28px;
+  opacity: 0.8;
+}
+```
+
+**竹节引言框（.bamboo-quote）**：
+```css
+.bamboo-quote {
+  border-left: 3px solid var(--qing);
+  padding: 20px 24px;
+  margin: 24px 0;
+  background: rgba(74,124,124,0.04);
+  font-family: '演示悠然小楷', serif;
+  font-size: 28px;
+  color: var(--mo-nong);
+  position: relative;
+}
+.bamboo-quote::before {
+  content: '"';
+  position: absolute;
+  top: -12px; left: 12px;
+  font-size: 64px;
+  color: var(--mo-qing);
+  font-family: 'Noto Serif SC', serif;
+}
+```
+
+**墨点装饰列表（.ink-dot-list）**：
+```css
+.ink-dot-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+.ink-dot-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 12px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--mo-zhong);
+}
+```
+
+### 布局特征
+- **极度留白** — 内容仅占画布 50-60%，大面积宣纸留白
+- 主标题居中或偏右，模仿书法落款位置
+- 上部 1/4 可为纯留白 + 一处墨迹装饰
+- 正文左对齐，行间距 ≥ 2.0
+- 底部山水剪影渐隐
+- 竖排诗句/短语作为侧边装饰
+- 每页至少一处「飞白」效果（渐隐文字或淡墨装饰）
+
+### 装饰元素（每页至少 3 个）
+- 泼墨飞溅 `.ink-splash`（2-3 处，不同大小和透明度）
+- 山水剪影 `.mountain-silhouette`（底部）
+- 墨线分割 `.ink-divider`
+- 素雅印章 `.shuimo-seal`（角落）
+- 淡墨圆（`border-radius:50%; background:rgba(26,26,26,0.03); width:300px`）
+- 竖排诗句装饰（右侧或左侧边缘，`var(--mo-qing)` 色）
+- 留白中的单个汉字装饰（超大淡色字，如「墨」「静」「禅」）
+
+### 色彩节奏
+```
+焦墨(#1a1a1a) → 标题/核心关键词
+浓墨(#333)    → 正文
+重墨(#555)    → 副标题
+淡墨(#888)    → 辅助说明
+清墨(#bbb)    → 装饰/背景文字
+青色(#4a7c7c) → 少量点缀（引用框/链接）
+暗朱(#7a2e2e) → 极少量强调（印章/警示）
+```
+
+### 动效（可选）
+```css
+/* 墨迹渐现 */
+@keyframes ink-fade-in {
+  from { opacity: 0; filter: blur(4px); transform: scale(0.95); }
+  to { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+/* 水纹扩散 */
+@keyframes ripple {
+  from { transform: scale(0.8); opacity: 0.6; }
+  to { transform: scale(1.2); opacity: 0; }
+}
+```
+
+### 插画规则
+- ✅ 可使用水墨风 SVG（山/水/竹/梅/兰/松）
+- ✅ 低透明度（opacity: 0.1-0.3）作为背景装饰
+- ❌ 禁止彩色插画、卡通风格
+- ❌ 禁止照片/摄影图
+
+### 禁止
+- ❌ 使用彩色（除青色和暗朱的极少量点缀外）
+- ❌ 使用英文字体作为主字体
+- ❌ 使用渐变彩色背景
+- ❌ 使用卡片阴影堆叠（只允许淡墨晕染）
+- ❌ 使用 emoji
+- ❌ 信息密度过高（水墨的核心是留白）
+- ❌ 使用粗线条边框（用墨线渐变代替）
+- ❌ 正文全部居中排列
+
+### 与 guofeng（国潮）的区别对照
+| 维度 | 国潮 guofeng | 水墨 shuimo |
+|------|-------------|-------------|
+| 色彩 | 朱砂红 + 金色 + 墨色 | 灰阶五墨 + 极少青/朱 |
+| 气质 | 华丽厚重、现代国潮 | 素雅空灵、文人画意 |
+| 装饰 | 印章、角花、金线 | 泼墨、山水、飞白 |
+| 留白 | 适度留白 | 极度留白（50%以上） |
+| 字体 | 行草 + 宋体 | 毛笔 + 小楷 + 古籍体 |
+| 纹理 | 宣纸点阵 | 宣纸纤维 + 墨晕 |
+
+---
+
 ## 通用规范（所有风格必须遵守）
 
 ### 画布尺寸

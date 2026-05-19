@@ -27,3 +27,6 @@ illustrations/
 fonts/*.ttf
 fonts/*.otf
 fonts/*.woff2
+fonts/fonts-net-cn/*.zip
+fonts/fonts-net-cn/extracted/
+fonts/fonts-net-cn/_manifest.json

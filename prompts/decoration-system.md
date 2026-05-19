@@ -505,6 +505,141 @@
 
 ---
 
+## 06 · 水墨古风 (shuimo) 装饰系统
+
+> 水墨画意境。以灰阶五墨为核心，追求空灵留白、泼墨飞白效果。
+
+### 装饰 CSS 类
+
+**泼墨飞溅（.ink-splash）**：
+```css
+.ink-splash {
+  position: absolute;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  background: radial-gradient(ellipse, rgba(26,26,26,0.08), transparent 70%);
+  filter: blur(2px);
+}
+.ink-splash-sm { width: 120px; height: 100px; }
+.ink-splash-md { width: 200px; height: 180px; }
+.ink-splash-lg { width: 320px; height: 280px; }
+```
+
+**山水剪影（.mountain-silhouette）**：
+```css
+.mountain-silhouette {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 240px;
+  background: linear-gradient(180deg,
+    transparent 0%, rgba(26,26,26,0.02) 30%,
+    rgba(26,26,26,0.06) 60%, rgba(26,26,26,0.1) 100%);
+  clip-path: polygon(
+    0% 100%, 0% 65%, 8% 55%, 15% 60%, 22% 45%, 30% 50%,
+    38% 35%, 45% 40%, 52% 28%, 58% 35%, 65% 22%, 72% 30%,
+    78% 25%, 85% 38%, 92% 30%, 100% 45%, 100% 100%);
+  opacity: 0.6;
+}
+```
+
+**墨线分割（.ink-divider）**：
+```css
+.ink-divider {
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent, #bbb 15%, #888 40%, #555 50%, #888 60%, #bbb 85%, transparent);
+  margin: 32px 0;
+}
+.ink-divider-thin { height: 1px; opacity: 0.5; }
+```
+
+**淡墨圆晕（.ink-circle）**：
+```css
+.ink-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,26,26,0.04), transparent 70%);
+}
+.ink-circle-sm { width: 150px; height: 150px; }
+.ink-circle-lg { width: 400px; height: 400px; }
+```
+
+**飞白文字（.feibai）** — 超大淡色装饰字：
+```css
+.feibai {
+  font-family: '正风毛笔', '三极泼墨体', cursive;
+  font-size: 280px;
+  color: rgba(26,26,26,0.04);
+  position: absolute;
+  z-index: 0;
+  user-select: none;
+}
+```
+
+**竹节引言框（.bamboo-quote）**：
+```css
+.bamboo-quote {
+  border-left: 3px solid #4a7c7c;
+  padding: 20px 24px;
+  background: rgba(74,124,124,0.04);
+  font-family: '演示悠然小楷', serif;
+  font-size: 28px;
+  color: #333;
+}
+```
+
+**墨点列表（.ink-dot-list）**：
+```css
+.ink-dot-list li { position: relative; padding-left: 24px; margin-bottom: 16px; }
+.ink-dot-list li::before {
+  content: ''; position: absolute;
+  left: 0; top: 12px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #555;
+}
+```
+
+**水墨印章（.shuimo-seal）**：
+```css
+.shuimo-seal {
+  font-family: '峄山碑篆体', serif;
+  writing-mode: vertical-rl;
+  border: 2px solid #7a2e2e;
+  color: #7a2e2e;
+  padding: 16px 10px;
+  letter-spacing: 10px;
+  font-size: 28px;
+  opacity: 0.8;
+}
+```
+
+**云雾效果（.mist）**：
+```css
+.mist {
+  position: absolute;
+  width: 100%; height: 120px;
+  background: linear-gradient(180deg,
+    rgba(247,243,236,0.9), rgba(247,243,236,0));
+  pointer-events: none;
+}
+.mist-top { top: 0; }
+.mist-bottom { bottom: 0; transform: rotate(180deg); }
+```
+
+### 装饰使用规则
+- 每页至少 3 个装饰元素
+- 墨迹飞溅放置在角落或边缘，不遮挡正文
+- 山水剪影仅用于底部，透明度低
+- 飞白装饰字放在内容下方（z-index:0）
+- 留白区域可以放淡墨圆晕增加层次
+- 印章放在右下或左下角
+
+### 插画规则
+- ❌ 禁止使用任何插画
+- 仅使用 CSS 生成的装饰效果（泼墨/山水/墨圆）
+
+---
+
 ## 装饰元素对照速查表
 
 | 风格 | 背景装饰 | 分割线 | 列表标记 | 卡片增强 | 徽章/标签 |
@@ -514,3 +649,4 @@
 | ai-daily | scanline + glow-orb | divider-tech | rank-num | data-card::before | 无（纯文字） |
 | guofeng | 宣纸纹理 + cloud-deco | gold-line | gf-bullet | quote-card | seal |
 | dopamine | blob + confetti | wave-divider | num-circle | bounce-card 边框 | pill |
+| shuimo | ink-splash + ink-circle | ink-divider | ink-dot-list | bamboo-quote | shuimo-seal |

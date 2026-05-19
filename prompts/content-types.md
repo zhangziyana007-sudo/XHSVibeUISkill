@@ -679,16 +679,18 @@ Page N — 末页
 
 | 内容类型 | 最佳风格 | 次选风格 | 不推荐 |
 |---------|---------|---------|--------|
-| 教程步骤 | ai-daily / knowledge | dopamine | guofeng |
+| 教程步骤 | ai-daily / knowledge | dopamine | guofeng / shuimo |
 | 合集推荐 | knowledge / dopamine | food | — |
 | 对比型 | knowledge | minimal | guofeng |
 | 清单型 | knowledge / minimal | ai-daily | food |
-| 金句语录 | guofeng / minimal | — | ai-daily |
-| 日报资讯 | ai-daily | knowledge | food / guofeng |
-| 数据报告 | knowledge | ai-daily / minimal | food |
-| 故事经验 | minimal / guofeng | — | dopamine |
+| 金句语录 | guofeng / shuimo / minimal | — | ai-daily |
+| 日报资讯 | ai-daily | knowledge | food / shuimo |
+| 数据报告 | knowledge | ai-daily / minimal | food / shuimo |
+| 故事经验 | minimal / shuimo / guofeng | — | dopamine |
 | 工具推荐 | ai-daily / knowledge | dopamine | guofeng |
 | 测评种草 | food / knowledge | dopamine | guofeng |
+| 诗词文学 | shuimo / guofeng | minimal | ai-daily / dopamine |
+| 禅意/哲思 | shuimo | minimal / guofeng | dopamine / ai-daily |
 
 ---
 
