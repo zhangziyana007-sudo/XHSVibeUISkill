@@ -120,6 +120,36 @@
 
 **绝对禁止 < 20px 的任何文字。违反此规则的输出视为无效。**
 
+### 正文重点强调（必须遵守）
+
+正文中的**关键词、核心观点、重要数据**必须有视觉强调效果，禁止全部平铺无重点。
+
+| 强调方式 | 实现 | 适用场景 |
+|---------|------|---------|
+| 加粗 | `font-weight: 700` 或 `<strong>` | 关键术语、核心概念 |
+| 放大 | 比正文大 4-8px（如正文 32px → 重点 36-40px） | 核心数据、结论句 |
+| 重点色 | `color: var(--primary)` 或 `color: var(--accent)` | 关键词高亮 |
+| 底色标记 | `background: var(--primary)/15%; padding: 2px 8px; border-radius: 4px` | 专有名词、品牌名 |
+| 下划线装饰 | `border-bottom: 2px solid var(--accent)` 或 `text-decoration: underline wavy var(--accent)` | 需引起注意的关键句 |
+
+**强调规则：**
+- 每段正文（≥3 行）中至少有 1-2 处视觉强调
+- 强调方式可组合使用（如：加粗 + 重点色）
+- 同一页面的强调风格保持统一（不要混搭太多种）
+- 强调内容占正文比例控制在 15-30%，过多则失去重点
+- 各风格的强调色优先使用该风格的 `--primary` 或 `--accent` 变量
+
+**示例（knowledge 风格）：**
+```html
+<p style="font-size:32px; color:var(--text); line-height:1.8">
+  AI Agent 的核心能力是
+  <strong style="color:var(--primary); font-size:36px">自主决策与工具调用</strong>，
+  它能根据目标自动拆解任务，比传统 Chatbot 效率提升
+  <span style="background:rgba(99,102,241,0.15); padding:2px 8px; border-radius:4px; font-weight:700">300%</span>
+  以上。
+</p>
+```
+
 ### 图标规则
 - 全部使用 Lucide 图标：`<i data-lucide="icon-name" style="width:28px;height:28px"></i>`
 - 图标颜色跟随文字色或主色
