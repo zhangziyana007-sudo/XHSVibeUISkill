@@ -63,6 +63,12 @@
       "secondary": [],
       "usage": "角落装饰(100-160px)，仅限东方花卉(梅花/樱花)"
     },
+    "shuimo": {
+      "primary": [],
+      "secondary": ["vectorshelf:plants"],
+      "usage": "❌ 主体禁用位图插画。水墨风使用 SVG 内联代码（竹/荷/松/兰/山水）。仅当需要梅花点缀时可用 vectorshelf:plants 的 pl129。SVG 组件定义见 prompts/decoration-system.md §06",
+      "svgComponents": ["ink-splash", "mountain-silhouette", "ink-divider", "bamboo-quote", "feibai", "shuimo-seal", "mist", "ink-bamboo", "ink-lotus", "ink-pine", "ink-orchid"]
+    },
     "knowledge": {
       "primary": ["shigureni:school", "shigureni:other"],
       "secondary": ["vectorshelf:goods"],

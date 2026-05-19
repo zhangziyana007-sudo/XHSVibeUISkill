@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "XHS Pipeline 艺术字体配置",
     "fontsDir": "../fonts/",
-    "totalFonts": 21,
-    "lastUpdated": "2025-05-19",
+    "totalFonts": 48,
+    "lastUpdated": "2025-07-24",
     "source": "fonts.net.cn 精选 + Google Fonts + GitHub 开源"
   },
   "categories": {
@@ -214,6 +214,102 @@
         }
       ]
     },
+    "shuimo_ink": {
+      "label": "水墨书法",
+      "description": "毛笔/行书/小楷/篆书，适用 shuimo 水墨古风",
+      "fonts": [
+        {
+          "name": "正风毛笔Bold",
+          "file": "fonts-net-cn/extracted/ZhengFengMaoBi-Bold/MasaFont-Bold-2.ttf",
+          "cssFamily": "'ZhengFeng MaoBi', cursive",
+          "style": "毛笔粗体",
+          "weight": "700",
+          "useCase": "泼墨大标题、封面主字",
+          "googleFonts": false,
+          "source": "fonts.net.cn"
+        },
+        {
+          "name": "三极泼墨体",
+          "file": "fonts-net-cn/extracted/SanJiPoMoTi/SanJiPoMoTi-2.ttf",
+          "cssFamily": "'SanJi PoMo', cursive",
+          "style": "泼墨飞白",
+          "weight": "400",
+          "useCase": "飞白装饰字、背景大字",
+          "googleFonts": false,
+          "source": "fonts.net.cn"
+        },
+        {
+          "name": "云峰静龙行书",
+          "file": "fonts-net-cn/extracted/YunFengJingLongXingShu/YunFengJingLongXingShu-2.ttf",
+          "cssFamily": "'YunFeng JingLong XingShu', cursive",
+          "style": "流畅行书",
+          "weight": "400",
+          "useCase": "副标题、引言",
+          "googleFonts": false,
+          "source": "fonts.net.cn"
+        },
+        {
+          "name": "演示悠然小楷",
+          "file": "fonts-net-cn/extracted/YanShiYouRanXiaoKai/YanShiYouRanXiaoKai-2.ttf",
+          "cssFamily": "'YanShi YouRan XiaoKai', serif",
+          "style": "小楷正文",
+          "weight": "400",
+          "useCase": "诗词正文、引言、竹节引言框",
+          "googleFonts": false,
+          "source": "fonts.net.cn"
+        },
+        {
+          "name": "演示夏行楷",
+          "file": "fonts-net-cn/extracted/YanShiXiaXingKai/YanShiXiaXingKai-2.ttf",
+          "cssFamily": "'YanShi Xia XingKai', serif",
+          "style": "行楷",
+          "weight": "400",
+          "useCase": "副标题、署名",
+          "googleFonts": false,
+          "source": "fonts.net.cn"
+        },
+        {
+          "name": "问藏书房",
+          "file": "fonts-net-cn/extracted/WenCangShuFang/WenCangShuFang-2.ttf",
+          "cssFamily": "'WenCang ShuFang', serif",
+          "style": "古典正文",
+          "weight": "400",
+          "useCase": "水墨风正文体、墨点列表",
+          "googleFonts": false,
+          "source": "fonts.net.cn"
+        },
+        {
+          "name": "令东齐伋复刻体",
+          "file": "fonts-net-cn/extracted/LingDongQiCheChunTang/LingDongQiCheChunTang-2.ttf",
+          "cssFamily": "'LingDong QiJi', serif",
+          "style": "古籍复刻",
+          "weight": "400",
+          "useCase": "引用古文、竖排装饰",
+          "googleFonts": false,
+          "source": "fonts.net.cn"
+        },
+        {
+          "name": "峄山碑篆体",
+          "file": "fonts-net-cn/extracted/ShanBeiZhuanTi/YiShanBeiZhuanTi.ttf",
+          "cssFamily": "'YiShan BeiZhuan', serif",
+          "style": "篆书",
+          "weight": "400",
+          "useCase": "印章文字",
+          "googleFonts": false,
+          "source": "fonts.net.cn"
+        },
+        {
+          "name": "杨任东竹石体",
+          "file": "fonts-net-cn/extracted/YangRenDongZhuShiTi-Regular/YangRenDongZhuShiTi-Regular-2.ttf",
+          "cssFamily": "'YangRenDong ZhuShi', serif",
+          "style": "竹石风",
+          "weight": "400",
+          "useCase": "文人气质正文、落款",
+          "googleFonts": false,
+          "source": "fonts.net.cn"
+        }
+      ]
+    },
     "editorial_serif": {
       "label": "文艺衬线",
       "description": "杂志感/设计感，适用 minimal 风格",
@@ -258,6 +354,12 @@
       "body": ["LXGW WenKai", "Noto Serif CJK SC Black"],
       "decoration": ["Liu Jian Mao Cao", "ZCOOL XiaoWei"]
     },
+    "shuimo": {
+      "title": ["正风毛笔Bold", "三极泼墨体"],
+      "subtitle": ["演示夏行楷", "云峰静龙行书"],
+      "body": ["问藏书房", "演示悠然小楷", "令东齐伋复刻体"],
+      "decoration": ["三极泼墨体", "峄山碑篆体", "杨任东竹石体"]
+    },
     "knowledge": {
       "title": ["Noto Sans CJK SC Black", "Smiley Sans (得意黑)", "Dela Gothic One"],
       "subtitle": ["Outfit", "Space Grotesk"],
@@ -284,23 +386,38 @@
     }
   },
   "manualDownload": {
-    "description": "以下字体需从 fonts.net.cn 手动下载（无公开 GitHub 仓库），作为可选扩展",
+    "description": "以下字体已从 fonts.net.cn 批量下载完成，存放在 fonts/fonts-net-cn/extracted/ 目录",
     "source": "https://www.fonts.net.cn/commercial-free/fonts-zh-1.html",
+    "basePath": "fonts/fonts-net-cn/extracted/",
+    "downloaded": true,
     "fonts": [
-      { "name": "庞门正道标题体", "url": "https://www.fonts.net.cn/font-32027849465.html", "category": "power_headline", "note": "超粗标题体，小红书大字首选" },
-      { "name": "标小智无界黑", "url": "https://www.fonts.net.cn/font-40781331078.html", "category": "power_headline", "note": "圆角黑体" },
-      { "name": "Aa厚底黑", "url": "https://www.fonts.net.cn/font-40735209503.html", "category": "power_headline", "note": "厚重方正" },
-      { "name": "站酷高端黑体", "url": "https://www.fonts.net.cn/font-32029178495.html", "category": "power_headline", "note": "经典设计师大标题" },
-      { "name": "站酷酷黑体", "url": "https://www.fonts.net.cn/font-32028302828.html", "category": "power_headline", "note": "方正锐利" },
-      { "name": "荆南波波黑", "url": "https://www.fonts.net.cn/font-40341294554.html", "category": "handwriting_cute", "note": "圆润亲和" },
-      { "name": "猫啃什锦黑", "url": "https://www.fonts.net.cn/font-40862130700.html", "category": "power_headline", "note": "混搭风趣味体" },
-      { "name": "衡山毛笔草书", "url": "https://www.fonts.net.cn/font-31769290309.html", "category": "guofeng_calligraphy", "note": "草书" },
-      { "name": "英椎行书", "url": "https://www.fonts.net.cn/font-31841266941.html", "category": "guofeng_calligraphy", "note": "古典行书" },
-      { "name": "字库江湖古风体", "url": "https://www.fonts.net.cn/font-44597180054.html", "category": "guofeng_calligraphy", "note": "武侠古风" },
-      { "name": "峄山碑篆体", "url": "https://www.fonts.net.cn/font-44061361469.html", "category": "guofeng_calligraphy", "note": "篆书印章" },
-      { "name": "黄凯桦律师手写体", "url": "https://www.fonts.net.cn/font-43983292004.html", "category": "handwriting_cute", "note": "成熟手写" },
-      { "name": "周字宋体", "url": "https://www.fonts.net.cn/font-43988421427.html", "category": "editorial_serif", "note": "古典宋体" },
-      { "name": "鼎猎宋刻体", "url": "https://www.fonts.net.cn/font-44566108930.html", "category": "editorial_serif", "note": "刻印风宋体" }
+      { "name": "庞门正道标题体", "dir": "PangMenZhengDaoBiaoTiTiMianFeiBan", "file": "PangMenZhengDaoBiaoTiMianFeiBan-2.ttf", "category": "power_headline", "cssFamily": "'PangMenZhengDao', sans-serif", "note": "超粗标题体，小红书大字首选" },
+      { "name": "标小智无界黑", "dir": "BiaoXiaoZhiWuJieHei", "file": "LogoSCUnboundedSans-Regular-2.ttf", "category": "power_headline", "cssFamily": "'BiaoXiaoZhi WuJieHei', sans-serif", "note": "圆角黑体" },
+      { "name": "站酷庆科黄油体", "dir": "ZhanKuQingKeHuangYouTi", "file": "ZhanKuQingKeHuangYouTi-2.ttf", "category": "handwriting_cute", "cssFamily": "'ZhanKu QingKe HuangYou', cursive", "note": "圆润厚重可爱" },
+      { "name": "优设标题黑", "dir": "YouSheBiaoTiHei", "file": "YouSheBiaoTiHei-2.ttf", "category": "power_headline", "cssFamily": "'YouShe BiaoTiHei', sans-serif", "note": "设计师标题黑体" },
+      { "name": "优设标题圆", "dir": "YouSheBiaoTiYuan", "file": "YouSheBiaoTiYuan-2.otf", "category": "power_headline", "cssFamily": "'YouShe BiaoTiYuan', sans-serif", "note": "圆角标题黑体" },
+      { "name": "问道超黑", "dir": "WenDaoChaoHei", "file": "WenDaoChaoHei-2.ttf", "category": "power_headline", "cssFamily": "'WenDao ChaoHei', sans-serif", "note": "超粗几何黑体" },
+      { "name": "寒蝉高黑体", "dir": "HanChanGaoHeiTi", "file": "HanChanGaoHeiTi-2.otf", "category": "power_headline", "cssFamily": "'HanChan GaoHei', sans-serif", "note": "高挑窄黑体" },
+      { "name": "创客贴金刚体", "dir": "ChuangKeTieJinGangTi", "file": "ChuangKeTieJinGangTi-2.otf", "category": "power_headline", "cssFamily": "'ChuangKeTie JinGang', sans-serif", "note": "粗壮金属感" },
+      { "name": "Dela黑体", "dir": "DeLaHeiTi", "file": "DelaGothicOne-Regular-2.ttf", "category": "power_headline", "cssFamily": "'Dela Gothic One', cursive", "note": "超粗哥特体" },
+      { "name": "千图小兔体", "dir": "QianTuXiaoTuTi", "file": "QianTuXiaoTuTi-2.ttf", "category": "handwriting_cute", "cssFamily": "'QianTu XiaoTu', cursive", "note": "可爱趣味标题" },
+      { "name": "小可奶酪体", "dir": "XiaoKeNaiLaoTi", "file": "XiaoKeNaiLaoTiShangYongMianFei@QingKeZiTi-2.ttf", "category": "handwriting_cute", "cssFamily": "'XiaoKe NaiLao', cursive", "note": "奶酪风可爱体" },
+      { "name": "仓耳小丸子", "dir": "CangErXiaoWanZi", "file": "CangErXiaoWanZi-2.ttf", "category": "handwriting_cute", "cssFamily": "'CangEr XiaoWanZi', cursive", "note": "圆润萌系" },
+      { "name": "猴桃圆M", "dir": "HouTaoYuan-M", "file": "KiwiMaru-Medium-2.ttf", "category": "handwriting_cute", "cssFamily": "'HouTaoYuan', sans-serif", "note": "日系圆体" },
+      { "name": "姚软笔手写体", "dir": "YaoRuanBiShouXieTi", "file": "Muyao-Softbrush-2.ttf", "category": "handwriting_cute", "cssFamily": "'Yao RuanBi', cursive", "note": "软笔手写风" },
+      { "name": "正风毛笔Bold", "dir": "ZhengFengMaoBi-Bold", "file": "MasaFont-Bold-2.ttf", "category": "shuimo_ink", "cssFamily": "'ZhengFeng MaoBi', cursive", "note": "毛笔粗体，泼墨标题" },
+      { "name": "三极泼墨体", "dir": "SanJiPoMoTi", "file": "SanJiPoMoTi-2.ttf", "category": "shuimo_ink", "cssFamily": "'SanJi PoMo', cursive", "note": "墨迹飞溅风格" },
+      { "name": "云峰静龙行书", "dir": "YunFengJingLongXingShu", "file": "YunFengJingLongXingShu-2.ttf", "category": "shuimo_ink", "cssFamily": "'YunFeng JingLong XingShu', cursive", "note": "流畅行书" },
+      { "name": "演示悠然小楷", "dir": "YanShiYouRanXiaoKai", "file": "YanShiYouRanXiaoKai-2.ttf", "category": "shuimo_ink", "cssFamily": "'YanShi YouRan XiaoKai', serif", "note": "优雅小楷正文" },
+      { "name": "演示夏行楷", "dir": "YanShiXiaXingKai", "file": "YanShiXiaXingKai-2.ttf", "category": "shuimo_ink", "cssFamily": "'YanShi Xia XingKai', serif", "note": "行楷副标题" },
+      { "name": "问藏书房", "dir": "WenCangShuFang", "file": "WenCangShuFang-2.ttf", "category": "shuimo_ink", "cssFamily": "'WenCang ShuFang', serif", "note": "古典正文体" },
+      { "name": "令东齐伋复刻体", "dir": "LingDongQiCheChunTang", "file": "LingDongQiCheChunTang-2.ttf", "category": "shuimo_ink", "cssFamily": "'LingDong QiJi', serif", "note": "古籍复刻体" },
+      { "name": "峄山碑篆体", "dir": "ShanBeiZhuanTi", "file": "YiShanBeiZhuanTi.ttf", "category": "shuimo_ink", "cssFamily": "'YiShan BeiZhuan', serif", "note": "篆书印章" },
+      { "name": "杨任东竹石体", "dir": "YangRenDongZhuShiTi-Regular", "file": "YangRenDongZhuShiTi-Regular-2.ttf", "category": "shuimo_ink", "cssFamily": "'YangRenDong ZhuShi', serif", "note": "竹石风古典体" },
+      { "name": "仓耳舒圆体W03", "dir": "CangErShuYuanTiW03", "file": "CangErShuYuanTiW03-2.ttf", "category": "handwriting_cute", "cssFamily": "'CangEr ShuYuan', sans-serif", "note": "舒适圆润" },
+      { "name": "唐献斌宋", "dir": "TangXianBinSong·MianFeiShangYong", "file": "TangXianBinSong-2.otf", "category": "editorial_serif", "cssFamily": "'TangXianBin Song', serif", "note": "手工刻印宋体" },
+      { "name": "思源宋体Regular", "dir": "SiYuanSongTiRegular", "file": "SourceHanSerifCN-Bold-2.otf", "category": "editorial_serif", "cssFamily": "'Source Han Serif CN', serif", "note": "Adobe开源衬线" },
+      { "name": "精品点阵体", "dir": "JingPinDianZhenTi", "file": "JingPinDianZhenTi7x7-2.ttf", "category": "tech_future", "cssFamily": "'JingPin DianZhen', monospace", "note": "像素风/复古游戏" }
     ]
   },
   "usage": {
