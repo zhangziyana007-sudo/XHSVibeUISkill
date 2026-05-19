@@ -58,6 +58,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts：严格按 style-templates.md 中的对应风格选择 -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=...&display=swap" />
+  <!-- 本地字体（得意黑/霞鹜文楷等非 Google Fonts 字体，按需添加） -->
+  <style>
+    /* @font-face { font-family: 'LXGW WenKai'; src: url('/home/ts/XHSVibeUISkill/fonts/LXGWWenKai-Regular.ttf'); } */
+    /* @font-face { font-family: 'Smiley Sans'; src: url('/home/ts/XHSVibeUISkill/fonts/SmileySans-Oblique.ttf'); } */
+    /* @font-face { font-family: 'Noto Sans CJK SC'; src: url('/home/ts/XHSVibeUISkill/fonts/NotoSansCJKsc-Black.otf'); font-weight: 900; } */
+    /* @font-face { font-family: 'Noto Serif CJK SC'; src: url('/home/ts/XHSVibeUISkill/fonts/NotoSerifCJKsc-Black.otf'); font-weight: 900; } */
+  </style>
   <!-- Lucide 图标（禁止用 emoji） -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
@@ -66,10 +73,13 @@
     /* 页面背景：从 style-templates.md 对应风格复制 */
     html, body { margin: 0; background: ...; }
     body {
-      font-family: '...';  /* 从 style-templates.md 对应风格取 */
+      font-family: '...';  /* 从 style-templates.md 对应风格"### 字体"章节取完整 font-family 声明 */
       min-height: 100vh; display: flex; align-items: center; justify-content: center;
       padding: 32px 16px;
     }
+    /* 标题/副标题字体（按 style-templates.md 字体映射表选择） */
+    h1, .title { font-family: '...'; }
+    h2, .subtitle { font-family: '...'; }
     /* Canvas 背景：从 style-templates.md 对应风格复制（含纹理/阴影） */
     .canvas {
       width: 900px; height: 1200px; position: relative;
@@ -129,7 +139,8 @@
 | 页面背景 | body 背景色是否正确？ |
 | Canvas 纹理 | 是否包含对应风格的 background-image？ |
 | Canvas 阴影 | box-shadow 是否正确？ |
-| 字体引入 | Google Fonts link 是否完整（含字重）？ |
+| 字体引入 | Google Fonts link 是否完整（含字重）？本地字体是否用 @font-face + 绝对路径？ |
+| 字体映射 | 标题/副标题/正文是否按 style-templates.md 字体映射表分配了不同字体？ |
 | 核心组件 | 是否使用了风格的标志性组件？ |
 | 布局结构 | 是否遵循风格的布局特征？ |
 | 装饰元素 | 是否有 ≥3 个 decoration-system.md 中的装饰？ |

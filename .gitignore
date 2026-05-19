@@ -22,3 +22,8 @@ illustrations/
 # 环境相关
 .env
 .env.local
+
+# 字体文件太大，不推送 Git（使用 Google Fonts CDN 或本地下载）
+fonts/*.ttf
+fonts/*.otf
+fonts/*.woff2

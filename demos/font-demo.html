@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=900, initial-scale=1" />
+  <title>XHS 字体效果 Demo</title>
+  <style>
+    @font-face { font-family: 'Ma Shan Zheng'; src: url('./fonts/MaShanZheng-Regular.ttf'); }
+    @font-face { font-family: 'Zhi Mang Xing'; src: url('./fonts/ZhiMangXing-Regular.ttf'); }
+    @font-face { font-family: 'ZCOOL XiaoWei'; src: url('./fonts/ZCOOLXiaoWei-Regular.ttf'); }
+    @font-face { font-family: 'Smiley Sans'; src: url('./fonts/SmileySans-Oblique.ttf'); }
+    @font-face { font-family: 'ZCOOL KuaiLe'; src: url('./fonts/ZCOOLKuaiLe-Regular.ttf'); }
+    @font-face { font-family: 'LXGW WenKai'; src: url('./fonts/LXGWWenKai-Regular.ttf'); }
+    @font-face { font-family: 'Noto Sans CJK SC'; src: url('./fonts/NotoSansCJKsc-Black.otf'); font-weight: 900; }
+    @font-face { font-family: 'JetBrains Mono'; src: url('./fonts/JetBrainsMono-Bold.ttf'); font-weight: 700; }
+    @font-face { font-family: 'Orbitron'; src: url('./fonts/Orbitron-Variable.ttf'); }
+    @font-face { font-family: 'Pacifico'; src: url('./fonts/Pacifico-Regular.ttf'); }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 900px; height: 1200px; overflow: hidden; }
+    body {
+      background: #0f0f0f;
+      color: #f5f5f5;
+      padding: 40px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .header h1 {
+      font-family: 'Noto Sans CJK SC', sans-serif;
+      font-weight: 900;
+      font-size: 42px;
+      background: linear-gradient(135deg, #00ff88, #60A5FA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header p {
+      font-size: 14px; color: #525252;
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card-label {
+      font-size: 11px;
+      color: #525252;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .card-sample {
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 11px; color: #404040;
+    }
+
+    .card-full {
+      grid-column: span 2;
+      background: linear-gradient(135deg, #1a1a1a, #1f1235);
+      text-align: center;
+      padding: 32px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .tag-gf { background: rgba(139,0,0,0.3); color: #ff6b6b; }
+    .tag-ai { background: rgba(0,255,136,0.2); color: #00ff88; }
+    .tag-food { background: rgba(232,105,10,0.2); color: #fb923c; }
+    .tag-dp { background: rgba(168,85,247,0.2); color: #c084fc; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>字体系统预览</h1>
+    <p>XHS Pipeline · 21 Fonts · Local @font-face</p>
+  </div>
+
+  <div class="grid">
+    <!-- 国潮书法 -->
+    <div class="card">
+      <div class="card-label">Ma Shan Zheng <span class="tag tag-gf">guofeng</span></div>
+      <div class="card-sample" style="font-family:'Ma Shan Zheng';font-size:38px;">人间值得</div>
+      <div class="card-sample" style="font-family:'Ma Shan Zheng';font-size:22px;color:#a8a29e;">五句醒脑金句</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Zhi Mang Xing <span class="tag tag-gf">guofeng</span></div>
+      <div class="card-sample" style="font-family:'Zhi Mang Xing';font-size:38px;">岁月静好</div>
+      <div class="card-sample" style="font-family:'Zhi Mang Xing';font-size:22px;color:#a8a29e;">一期一会</div>
+    </div>
+
+    <!-- 力量感 -->
+    <div class="card">
+      <div class="card-label">Noto Sans CJK SC · 900 <span class="tag tag-ai">ai-daily</span></div>
+      <div class="card-sample" style="font-family:'Noto Sans CJK SC';font-weight:900;font-size:36px;">效率翻倍</div>
+      <div class="card-sample" style="font-family:'Noto Sans CJK SC';font-weight:900;font-size:20px;color:#a8a29e;">3个方法改变你</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Smiley Sans · 得意黑 <span class="tag tag-dp">dopamine</span></div>
+      <div class="card-sample" style="font-family:'Smiley Sans';font-size:36px;">今日热点</div>
+      <div class="card-sample" style="font-family:'Smiley Sans';font-size:20px;color:#a8a29e;">TOP 5 必看</div>
+    </div>
+
+    <!-- 手写 -->
+    <div class="card">
+      <div class="card-label">ZCOOL KuaiLe <span class="tag tag-food">food</span></div>
+      <div class="card-sample" style="font-family:'ZCOOL KuaiLe';font-size:34px;">超好喝！</div>
+      <div class="card-sample" style="font-family:'ZCOOL KuaiLe';font-size:20px;color:#a8a29e;">夏日续命饮品</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">LXGW WenKai · 霞鹜文楷 <span class="tag tag-gf">guofeng</span></div>
+      <div class="card-sample" style="font-family:'LXGW WenKai';font-size:32px;">读书使人明智</div>
+      <div class="card-sample" style="font-family:'LXGW WenKai';font-size:18px;color:#a8a29e;">温柔楷体正文</div>
+    </div>
+
+    <!-- 科技 -->
+    <div class="card">
+      <div class="card-label">JetBrains Mono <span class="tag tag-ai">ai-daily</span></div>
+      <div class="card-sample" style="font-family:'JetBrains Mono';font-weight:700;font-size:30px;">AI_WEEKLY</div>
+      <div class="card-sample" style="font-family:'JetBrains Mono';font-size:18px;color:#a8a29e;">v2.4.1 · 2024.01</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Orbitron + Pacifico <span class="tag tag-dp">mixed</span></div>
+      <div class="card-sample" style="font-family:'Orbitron';font-size:28px;">ISSUE #047</div>
+      <div class="card-sample" style="font-family:'Pacifico';font-size:22px;color:#FF6B9D;">Summer Vibes</div>
+    </div>
+
+    <!-- 组合封面 -->
+    <div class="card card-full">
+      <div class="card-label">guofeng 封面组合效果</div>
+      <div style="font-family:'Ma Shan Zheng';font-size:56px;color:#f4ecd8;">人间值得</div>
+      <div style="font-family:'ZCOOL XiaoWei';font-size:22px;color:#b8860b;margin-top:4px;">读书 · 笔记 · 感悟</div>
+    </div>
+  </div>
+</body>
+</html>

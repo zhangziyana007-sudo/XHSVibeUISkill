@@ -355,12 +355,27 @@ html, body { background: #e9e3d5; }  /* 旧纸色外框 */
 ```
 
 ### 字体
+
+**字体用途映射**（参考 `config/fonts.json` → styleMapping.guofeng）：
+| 用途 | 推荐字体 | 效果 |
+|------|----------|------|
+| 主标题 | Ma Shan Zheng / Zhi Mang Xing / Liu Jian Mao Cao | 毛笔书法感 |
+| 副标题 | ZCOOL XiaoWei / Long Cang / LXGW WenKai | 文人气质 |
+| 正文 | LXGW WenKai / Noto Serif SC | 典雅宋体 |
+| 装饰 | Liu Jian Mao Cao / ZCOOL XiaoWei | 草书/碑刻 |
+
 ```css
-body { font-family: 'Noto Serif SC', 'Songti SC', serif; }
+body { font-family: 'Noto Serif SC', 'LXGW WenKai', 'Songti SC', serif; }
+h1, .title { font-family: 'Ma Shan Zheng', 'Zhi Mang Xing', cursive; }
+h2, .subtitle { font-family: 'ZCOOL XiaoWei', 'Long Cang', serif; }
 ```
 Google Fonts 引入：
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=ZCOOL+XiaoWei&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&family=Liu+Jian+Mao+Cao&family=Long+Cang&family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@500;700;900&display=swap" />
+```
+本地字体（非 Google Fonts）：
+```css
+@font-face { font-family: 'LXGW WenKai'; src: url('../fonts/LXGWWenKai-Regular.ttf'); }
 ```
 
 ### 核心组件
@@ -457,13 +472,22 @@ html, body { background: #eae8e4; }
 ```
 
 ### 字体
+
+**字体用途映射**（参考 `config/fonts.json` → styleMapping.minimal）：
+| 用途 | 推荐字体 | 效果 |
+|------|----------|------|
+| 主标题 | Noto Serif SC (700) / Playfair Display | 经典衬线 |
+| 副标题 | Inter / Space Grotesk | 极简几何 |
+| 正文 | Noto Serif SC (400) | 舒适阅读 |
+| 编号/标注 | Inter (light) | 克制辅助 |
+
 ```css
 body { font-family: 'Noto Serif SC', 'Songti SC', Georgia, serif; }
-/* 辅助标签/编号用 Inter */
+.label, .num { font-family: 'Inter', 'Playfair Display', serif; }
 ```
 Google Fonts 引入：
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@400;500&display=swap" />
 ```
 
 ### 布局特征
@@ -540,14 +564,29 @@ html, body { background: #1a1835; }
 ```
 
 ### 字体
+
+**字体用途映射**（参考 `config/fonts.json` → styleMapping.dopamine）：
+| 用途 | 推荐字体 | 效果 |
+|------|----------|------|
+| 主标题 | ZCOOL KuaiLe / Dela Gothic One | 圆润活泼/粗黑冲击 |
+| 副标题 | Pacifico / Caveat | 手写趣味 |
+| 正文 | Noto Sans SC (700-900) | 饱满有力 |
+| 装饰 | Pacifico / Orbitron | 圆体/几何 |
+
 ```css
-body { font-family: Inter, 'PingFang SC', 'Noto Sans SC', system-ui, sans-serif; }
-/* 字重偏重：700-900 */
+body { font-family: 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif; font-weight: 700; }
+h1, .title { font-family: 'ZCOOL KuaiLe', 'Dela Gothic One', sans-serif; }
+.deco, .tag { font-family: 'Pacifico', 'Caveat', cursive; }
 ```
 Google Fonts 引入：
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Inter:wght@700;800;900&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=ZCOOL+KuaiLe&family=Dela+Gothic+One&family=Pacifico&family=Caveat:wght@500;700&family=Orbitron:wght@700;900&display=swap" />
 ```
+本地字体（非 Google Fonts）：
+```css
+@font-face { font-family: 'Smiley Sans'; src: url('../fonts/SmileySans-Oblique.ttf'); }
+```
+> 得意黑 (Smiley Sans) 适合作为活力标题的替代选择
 
 ### 核心组件
 
@@ -654,13 +693,29 @@ html, body { background: #ebebeb; }
 ```
 
 ### 字体
+
+**字体用途映射**（参考 `config/fonts.json` → styleMapping.knowledge）：
+| 用途 | 推荐字体 | 效果 |
+|------|----------|------|
+| 主标题 | Noto Sans SC (900) / Dela Gothic One | 超粗黑体冲击 |
+| 副标题 | Outfit / Space Grotesk | 现代几何 |
+| 正文 | Noto Sans SC (500) | 清晰易读 |
+| 数字/代码 | JetBrains Mono / Orbitron | 技术感数字 |
+
 ```css
-body { font-family: Inter, 'PingFang SC', 'Noto Sans SC', system-ui, sans-serif; }
+body { font-family: 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif; }
+.big-num, .code { font-family: 'JetBrains Mono', 'Orbitron', monospace; }
+h1, .title { font-family: 'Outfit', 'Noto Sans SC', sans-serif; font-weight: 900; }
 ```
 Google Fonts 引入：
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@500;700;800;900&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Outfit:wght@600;700;900&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700&family=Orbitron:wght@700;900&display=swap" />
 ```
+本地字体（非 Google Fonts）：
+```css
+@font-face { font-family: 'Smiley Sans'; src: url('../fonts/SmileySans-Oblique.ttf'); }
+```
+> 得意黑适合知识卡主标题的替代选择，斜体设计增加动感
 
 ### 核心组件
 
@@ -768,12 +823,23 @@ html, body { background: #f0e8df; }
 ```
 
 ### 字体
+
+**字体用途映射**（参考 `config/fonts.json` → styleMapping.food）：
+| 用途 | 推荐字体 | 效果 |
+|------|----------|------|
+| 主标题 | ZCOOL QingKe HuangYou / ZCOOL KuaiLe | 手写活泼/圆润可爱 |
+| 副标题 | Caveat / Righteous | 手写随性/复古招牌 |
+| 正文 | Noto Sans SC (500) | 清晰易读 |
+| 装饰 | Pacifico / Caveat | 手写花体 |
+
 ```css
-body { font-family: Inter, 'PingFang SC', 'Noto Sans SC', system-ui, sans-serif; }
+body { font-family: 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif; }
+h1, .title { font-family: 'ZCOOL QingKe HuangYou', 'ZCOOL KuaiLe', cursive; }
+.tag, .score { font-family: 'Caveat', 'Righteous', cursive; }
 ```
 Google Fonts 引入：
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@500;700;800&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=ZCOOL+QingKe+HuangYou&family=ZCOOL+KuaiLe&family=Caveat:wght@500;700&family=Righteous&family=Pacifico&display=swap" />
 ```
 
 ### 核心组件
@@ -893,14 +959,30 @@ html, body { background: #1f1f1f; }
 ```
 
 ### 字体
+
+**字体用途映射**（参考 `config/fonts.json` → styleMapping.ai-daily）：
+| 用途 | 推荐字体 | 效果 |
+|------|----------|------|
+| 主标题 | Noto Sans SC (900) | 超粗黑体 |
+| 副标题 | JetBrains Mono / Space Grotesk | 代码感/几何 |
+| 正文 | Noto Sans SC (500) | 清晰技术 |
+| 装饰/数据 | Orbitron / Black Ops One / JetBrains Mono | 科幻/军事/代码 |
+
 ```css
-body { font-family: Inter, 'PingFang SC', 'Noto Sans SC', system-ui, sans-serif; }
-.mono { font-family: 'JetBrains Mono', monospace; }
+body { font-family: 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif; }
+.mono, .code { font-family: 'JetBrains Mono', monospace; }
+.deco-num { font-family: 'Orbitron', 'Black Ops One', monospace; }
+h1, .headline { font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif; font-weight: 900; }
 ```
 Google Fonts 引入：
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+SC:wght@500;700;900&family=Inter:wght@500;700;800;900&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+SC:wght@500;700;900&family=Space+Grotesk:wght@500;700&family=Orbitron:wght@700;900&family=Black+Ops+One&display=swap" />
 ```
+本地字体（非 Google Fonts）：
+```css
+@font-face { font-family: 'Smiley Sans'; src: url('../fonts/SmileySans-Oblique.ttf'); }
+```
+> 得意黑适合 AI 日报标题，斜体造型有科技动感
 
 ### 核心组件
 

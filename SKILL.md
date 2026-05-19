@@ -175,3 +175,22 @@ projects/{topic}/
 详细分类和推荐用法见 `prompts/illustration-index.md`。
 
 **⚠️ 重要**：HTML 中引用插画时必须使用绝对路径，不可使用相对路径（Playwright file:// 协议限制）。
+
+## 本地字体资源
+
+21 套高质量字体已下载至 `fonts/` 目录，覆盖 5 大类别：
+
+| 类别 | 字体 | 用途场景 |
+|------|------|----------|
+| 书法毛笔 | Ma Shan Zheng, Liu Jian Mao Cao, Zhi Mang Xing, Long Cang | guofeng 标题 |
+| 中文衬线 | ZCOOL XiaoWei, LXGW WenKai, Noto Serif CJK SC | guofeng/minimal 正文 |
+| 中文黑体 | Noto Sans CJK SC Black, Smiley Sans, Dela Gothic One, ZCOOL KuaiLe, ZCOOL QingKe HuangYou | 全风格标题 |
+| 西文展示 | Pacifico, Caveat, Orbitron, Black Ops One, Righteous, Playfair Display, Outfit, Space Grotesk | 装饰/副标题 |
+| 等宽字体 | JetBrains Mono | ai-daily/knowledge 代码/数据 |
+
+**字体加载方式**：
+1. **Google Fonts CDN**（优先）— 大部分字体可通过 Google Fonts 引入
+2. **本地 @font-face**（补充）— 得意黑、霞鹜文楷等非 Google Fonts 字体用本地文件
+
+详细配置见 `config/fonts.json`，管理指南见 `docs/font-management.md`。
+各风格的字体推荐映射见 `prompts/style-templates.md` 各 "### 字体" 章节。

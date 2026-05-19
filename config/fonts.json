@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "description": "XHS Pipeline 艺术字体配置",
+    "fontsDir": "../fonts/",
+    "totalFonts": 21,
+    "lastUpdated": "2025-05-19",
+    "source": "fonts.net.cn 精选 + Google Fonts + GitHub 开源"
+  },
+  "categories": {
+    "guofeng_calligraphy": {
+      "label": "国潮书法",
+      "description": "毛笔/行书/楷书风格，适用 guofeng 风格封面标题",
+      "fonts": [
+        {
+          "name": "Ma Shan Zheng",
+          "file": "MaShanZheng-Regular.ttf",
+          "cssFamily": "'Ma Shan Zheng', cursive",
+          "style": "楷书手写",
+          "weight": "400",
+          "useCase": "国风主标题、金句",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "Liu Jian Mao Cao",
+          "file": "LiuJianMaoCao-Regular.ttf",
+          "cssFamily": "'Liu Jian Mao Cao', cursive",
+          "style": "狂草书法",
+          "weight": "400",
+          "useCase": "大气装饰标题",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "Long Cang",
+          "file": "LongCang-Regular.ttf",
+          "cssFamily": "'Long Cang', cursive",
+          "style": "行书风格",
+          "weight": "400",
+          "useCase": "引言、副标题",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "Zhi Mang Xing",
+          "file": "ZhiMangXing-Regular.ttf",
+          "cssFamily": "'Zhi Mang Xing', cursive",
+          "style": "行楷",
+          "weight": "400",
+          "useCase": "文化类主标题",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "ZCOOL XiaoWei",
+          "file": "ZCOOLXiaoWei-Regular.ttf",
+          "cssFamily": "'ZCOOL XiaoWei', serif",
+          "style": "古风纤细",
+          "weight": "400",
+          "useCase": "印章文字、署名、副标题",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "LXGW WenKai",
+          "file": "LXGWWenKai-Regular.ttf",
+          "cssFamily": "'LXGW WenKai', serif",
+          "style": "楷体",
+          "weight": "400",
+          "useCase": "正文楷体、文艺引言、古风正文",
+          "googleFonts": false,
+          "source": "github.com/lxgw/LxgwWenKai"
+        }
+      ]
+    },
+    "power_headline": {
+      "label": "力量感大标题",
+      "description": "超粗黑体，适用 knowledge / ai-daily 风格封面大字标题",
+      "fonts": [
+        {
+          "name": "Noto Sans CJK SC Black",
+          "file": "NotoSansCJKsc-Black.otf",
+          "cssFamily": "'Noto Sans CJK SC', sans-serif",
+          "style": "超黑体",
+          "weight": "900",
+          "useCase": "万能大标题、知识类封面",
+          "googleFonts": true,
+          "googleFontsName": "Noto Sans SC",
+          "source": "github.com/googlefonts/noto-cjk"
+        },
+        {
+          "name": "Noto Serif CJK SC Black",
+          "file": "NotoSerifCJKsc-Black.otf",
+          "cssFamily": "'Noto Serif CJK SC', serif",
+          "style": "超粗宋体",
+          "weight": "900",
+          "useCase": "文艺感大标题",
+          "googleFonts": true,
+          "googleFontsName": "Noto Serif SC",
+          "source": "github.com/googlefonts/noto-cjk"
+        },
+        {
+          "name": "Smiley Sans (得意黑)",
+          "file": "SmileySans-Oblique.ttf",
+          "cssFamily": "'Smiley Sans', sans-serif",
+          "style": "斜体几何黑",
+          "weight": "400",
+          "useCase": "现代感标题、潮流封面",
+          "googleFonts": false,
+          "source": "github.com/atelier-anchor/smiley-sans"
+        },
+        {
+          "name": "Dela Gothic One",
+          "file": "DelaGothicOne-Regular.ttf",
+          "cssFamily": "'Dela Gothic One', cursive",
+          "style": "超粗哥特体",
+          "weight": "400",
+          "useCase": "冲击力封面标题（含CJK）",
+          "googleFonts": true,
+          "source": "google/fonts"
+        }
+      ]
+    },
+    "handwriting_cute": {
+      "label": "手写温柔",
+      "description": "圆润可爱，适用 dopamine / food 风格",
+      "fonts": [
+        {
+          "name": "ZCOOL KuaiLe",
+          "file": "ZCOOLKuaiLe-Regular.ttf",
+          "cssFamily": "'ZCOOL KuaiLe', cursive",
+          "style": "圆润可爱",
+          "weight": "400",
+          "useCase": "活泼标题、种草封面",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "ZCOOL QingKe HuangYou",
+          "file": "ZCOOLQingKeHuangYou-Regular.ttf",
+          "cssFamily": "'ZCOOL QingKe HuangYou', cursive",
+          "style": "厚重圆润",
+          "weight": "400",
+          "useCase": "美食/甜品标题",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "Caveat",
+          "file": "Caveat-Variable.ttf",
+          "cssFamily": "'Caveat', cursive",
+          "style": "英文手写",
+          "weight": "400-700",
+          "useCase": "咖啡/生活方式英文装饰",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "Pacifico",
+          "file": "Pacifico-Regular.ttf",
+          "cssFamily": "'Pacifico', cursive",
+          "style": "英文草书",
+          "weight": "400",
+          "useCase": "活力英文装饰、夏日感",
+          "googleFonts": true,
+          "source": "google/fonts"
+        }
+      ]
+    },
+    "tech_future": {
+      "label": "科技未来",
+      "description": "等宽/几何/未来风格，适用 ai-daily 风格",
+      "fonts": [
+        {
+          "name": "JetBrains Mono",
+          "file": "JetBrainsMono-Bold.ttf",
+          "cssFamily": "'JetBrains Mono', monospace",
+          "style": "等宽编程字体",
+          "weight": "700",
+          "useCase": "代码/版本号/技术标签",
+          "googleFonts": true,
+          "source": "github.com/JetBrains/JetBrainsMono"
+        },
+        {
+          "name": "Space Grotesk",
+          "file": "SpaceGrotesk-Variable.ttf",
+          "cssFamily": "'Space Grotesk', sans-serif",
+          "style": "科技几何",
+          "weight": "300-700",
+          "useCase": "英文大标题、科技感",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "Orbitron",
+          "file": "Orbitron-Variable.ttf",
+          "cssFamily": "'Orbitron', sans-serif",
+          "style": "未来主义",
+          "weight": "400-900",
+          "useCase": "数字/期号/年份装饰",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "Black Ops One",
+          "file": "BlackOpsOne-Regular.ttf",
+          "cssFamily": "'Black Ops One', cursive",
+          "style": "军事极客",
+          "weight": "400",
+          "useCase": "重要标签/警告文字",
+          "googleFonts": true,
+          "source": "google/fonts"
+        }
+      ]
+    },
+    "editorial_serif": {
+      "label": "文艺衬线",
+      "description": "杂志感/设计感，适用 minimal 风格",
+      "fonts": [
+        {
+          "name": "Playfair Display",
+          "file": "PlayfairDisplay-Variable.ttf",
+          "cssFamily": "'Playfair Display', serif",
+          "style": "经典衬线",
+          "weight": "400-900",
+          "useCase": "文艺杂志感大标题",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "Outfit",
+          "file": "Outfit-Variable.ttf",
+          "cssFamily": "'Outfit', sans-serif",
+          "style": "几何圆角",
+          "weight": "100-900",
+          "useCase": "现代感英文标题",
+          "googleFonts": true,
+          "source": "google/fonts"
+        },
+        {
+          "name": "Righteous",
+          "file": "Righteous-Regular.ttf",
+          "cssFamily": "'Righteous', cursive",
+          "style": "复古粗体",
+          "weight": "400",
+          "useCase": "美食/复古封面英文",
+          "googleFonts": true,
+          "source": "google/fonts"
+        }
+      ]
+    }
+  },
+  "styleMapping": {
+    "guofeng": {
+      "title": ["Ma Shan Zheng", "Zhi Mang Xing", "Liu Jian Mao Cao"],
+      "subtitle": ["ZCOOL XiaoWei", "Long Cang", "LXGW WenKai"],
+      "body": ["LXGW WenKai", "Noto Serif CJK SC Black"],
+      "decoration": ["Liu Jian Mao Cao", "ZCOOL XiaoWei"]
+    },
+    "knowledge": {
+      "title": ["Noto Sans CJK SC Black", "Smiley Sans (得意黑)", "Dela Gothic One"],
+      "subtitle": ["Outfit", "Space Grotesk"],
+      "body": ["Noto Sans CJK SC Black"],
+      "decoration": ["JetBrains Mono", "Orbitron"]
+    },
+    "ai-daily": {
+      "title": ["Noto Sans CJK SC Black", "Smiley Sans (得意黑)"],
+      "subtitle": ["JetBrains Mono", "Space Grotesk"],
+      "body": ["Noto Sans CJK SC Black"],
+      "decoration": ["Orbitron", "Black Ops One", "JetBrains Mono"]
+    },
+    "food": {
+      "title": ["ZCOOL QingKe HuangYou", "ZCOOL KuaiLe"],
+      "subtitle": ["Caveat", "Righteous"],
+      "body": ["Noto Sans CJK SC Black"],
+      "decoration": ["Pacifico", "Caveat"]
+    },
+    "dopamine": {
+      "title": ["ZCOOL KuaiLe", "Smiley Sans (得意黑)", "Dela Gothic One"],
+      "subtitle": ["Pacifico", "Caveat"],
+      "body": ["Noto Sans CJK SC Black"],
+      "decoration": ["Pacifico", "Orbitron"]
+    }
+  },
+  "manualDownload": {
+    "description": "以下字体需从 fonts.net.cn 手动下载（无公开 GitHub 仓库），作为可选扩展",
+    "source": "https://www.fonts.net.cn/commercial-free/fonts-zh-1.html",
+    "fonts": [
+      { "name": "庞门正道标题体", "url": "https://www.fonts.net.cn/font-32027849465.html", "category": "power_headline", "note": "超粗标题体，小红书大字首选" },
+      { "name": "标小智无界黑", "url": "https://www.fonts.net.cn/font-40781331078.html", "category": "power_headline", "note": "圆角黑体" },
+      { "name": "Aa厚底黑", "url": "https://www.fonts.net.cn/font-40735209503.html", "category": "power_headline", "note": "厚重方正" },
+      { "name": "站酷高端黑体", "url": "https://www.fonts.net.cn/font-32029178495.html", "category": "power_headline", "note": "经典设计师大标题" },
+      { "name": "站酷酷黑体", "url": "https://www.fonts.net.cn/font-32028302828.html", "category": "power_headline", "note": "方正锐利" },
+      { "name": "荆南波波黑", "url": "https://www.fonts.net.cn/font-40341294554.html", "category": "handwriting_cute", "note": "圆润亲和" },
+      { "name": "猫啃什锦黑", "url": "https://www.fonts.net.cn/font-40862130700.html", "category": "power_headline", "note": "混搭风趣味体" },
+      { "name": "衡山毛笔草书", "url": "https://www.fonts.net.cn/font-31769290309.html", "category": "guofeng_calligraphy", "note": "草书" },
+      { "name": "英椎行书", "url": "https://www.fonts.net.cn/font-31841266941.html", "category": "guofeng_calligraphy", "note": "古典行书" },
+      { "name": "字库江湖古风体", "url": "https://www.fonts.net.cn/font-44597180054.html", "category": "guofeng_calligraphy", "note": "武侠古风" },
+      { "name": "峄山碑篆体", "url": "https://www.fonts.net.cn/font-44061361469.html", "category": "guofeng_calligraphy", "note": "篆书印章" },
+      { "name": "黄凯桦律师手写体", "url": "https://www.fonts.net.cn/font-43983292004.html", "category": "handwriting_cute", "note": "成熟手写" },
+      { "name": "周字宋体", "url": "https://www.fonts.net.cn/font-43988421427.html", "category": "editorial_serif", "note": "古典宋体" },
+      { "name": "鼎猎宋刻体", "url": "https://www.fonts.net.cn/font-44566108930.html", "category": "editorial_serif", "note": "刻印风宋体" }
+    ]
+  },
+  "usage": {
+    "online": {
+      "description": "HTML 中通过 Google Fonts CDN 加载（推荐，零配置）",
+      "template": "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family={FONT_NAME}&display=swap\" />"
+    },
+    "local": {
+      "description": "通过 @font-face 加载本地字体（用于非 Google Fonts 字体或离线环境）",
+      "template": "@font-face { font-family: '{FONT_NAME}'; src: url('./fonts/{FILE}') format('truetype'); }"
+    }
+  }
+}
