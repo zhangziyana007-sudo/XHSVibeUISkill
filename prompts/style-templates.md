@@ -378,6 +378,31 @@ Google Fonts 引入：
 @font-face { font-family: 'LXGW WenKai'; src: url('../fonts/LXGWWenKai-Regular.ttf'); }
 ```
 
+**本地字体扩展（fonts-net-cn 精选）：**
+| 字体名 | 用途 | 效果 | zip路径 |
+|--------|------|------|---------|
+| 演示悠然小楷 | 副标题/正文 | 优雅小楷，文人气韵 | `fonts-net-cn/演示悠然小楷.zip` |
+| 演示夏行楷 | 主标题/副标题 | 行楷流畅，动感十足 | `fonts-net-cn/演示夏行楷.zip` |
+| 云峰静龙行书 | 主标题装饰 | 飘逸行书，龙飞凤舞 | `fonts-net-cn/云峰静龙行书.zip` |
+| 正风毛笔 | 主标题 | 粗犷毛笔，气势磅礴 | `fonts-net-cn/正风毛笔 Bold.zip` |
+| 三极泼墨体 | 装饰/标题 | 泼墨写意，浓墨重彩 | `fonts-net-cn/三极泼墨体.zip` |
+| 峄山碑篆体 | 印章/装饰 | 篆书古朴，适合.seal组件 | `fonts-net-cn/峄山碑篆体.zip` |
+| 令东齐伋复刻体 | 正文 | 古籍刊刻体，典雅庄重 | `fonts-net-cn/令东齐伋复刻体.zip` |
+| 问藏书房 | 正文/副标题 | 书卷气，文艺内敛 | `fonts-net-cn/问藏书房.zip` |
+
+```css
+/* 古风本地字体示例 @font-face */
+@font-face { font-family: '演示悠然小楷'; src: url('../fonts/fonts-net-cn/演示悠然小楷/YanShiYouRanXiaoKai-2.ttf'); }
+@font-face { font-family: '演示夏行楷'; src: url('../fonts/fonts-net-cn/演示夏行楷/YanShiXiaXingKai-2.ttf'); }
+@font-face { font-family: '云峰静龙行书'; src: url('../fonts/fonts-net-cn/云峰静龙行书/YunFengJingLongXingShu-2.ttf'); }
+@font-face { font-family: '正风毛笔'; src: url('../fonts/fonts-net-cn/正风毛笔 Bold/MasaFont-Bold-2.ttf'); }
+@font-face { font-family: '三极泼墨体'; src: url('../fonts/fonts-net-cn/三极泼墨体/SanJiPoMoTi-2.ttf'); }
+@font-face { font-family: '峄山碑篆体'; src: url('../fonts/fonts-net-cn/峄山碑篆体/YiShanBeiZhuanTi.ttf'); }
+@font-face { font-family: '令东齐伋复刻体'; src: url('../fonts/fonts-net-cn/令东齐伋复刻体/LingDongQiCheChunTang-2.ttf'); }
+@font-face { font-family: '问藏书房'; src: url('../fonts/fonts-net-cn/问藏书房/WenCangShuFang-2.ttf'); }
+```
+> 古风推荐组合：标题用「正风毛笔/云峰静龙行书」+ 副标题用「演示悠然小楷」+ 正文用「问藏书房/令东齐伋复刻体」+ 印章用「峄山碑篆体」
+
 ### 核心组件
 
 **印章（.seal）** — 古风的灵魂元素，每页至少出现一次：
@@ -490,6 +515,22 @@ Google Fonts 引入：
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@400;500&display=swap" />
 ```
 
+**本地字体扩展（fonts-net-cn 精选）：**
+| 字体名 | 用途 | 效果 | zip路径 |
+|--------|------|------|---------|
+| 思源宋体 | 正文/标题 | 高质量宋体，极简首选 | `fonts-net-cn/思源宋体.zip` |
+| 汤宪滨宋 | 标题/正文 | 精致瘦宋，文艺气质 | `fonts-net-cn/汤宪滨宋·免费商用.zip` |
+| 杨任东竹石体 | 标题 | 竹石清劲，高级感 | `fonts-net-cn/杨任东竹石体 Regular.zip` |
+
+```css
+/* 极简本地字体示例 @font-face */
+@font-face { font-family: '思源宋体'; src: url('../fonts/fonts-net-cn/思源宋体/SourceHanSerifCN-Regular-1.otf'); font-weight: 400; }
+@font-face { font-family: '思源宋体'; src: url('../fonts/fonts-net-cn/思源宋体/SourceHanSerifCN-Bold-2.otf'); font-weight: 700; }
+@font-face { font-family: '汤宪滨宋'; src: url('../fonts/fonts-net-cn/汤宪滨宋·免费商用/汤宪滨宋.ttf'); }
+@font-face { font-family: '杨任东竹石体'; src: url('../fonts/fonts-net-cn/杨任东竹石体 Regular/杨任东竹石体-Regular.ttf'); }
+```
+> 极简推荐组合：正文用「思源宋体」替代系统 Songti SC，标题用「汤宪滨宋」增添文艺感
+
 ### 布局特征
 - **极度留白** — 内容区从 top: 340px 开始（上方 1/3 为留白）
 - 左对齐为主（不居中）
@@ -587,6 +628,27 @@ Google Fonts 引入：
 @font-face { font-family: 'Smiley Sans'; src: url('../fonts/SmileySans-Oblique.ttf'); }
 ```
 > 得意黑 (Smiley Sans) 适合作为活力标题的替代选择
+
+**本地字体扩展（fonts-net-cn 精选）：**
+| 字体名 | 用途 | 效果 | zip路径 |
+|--------|------|------|---------|
+| 优设标题圆 | 主标题 | 超圆润大标题，活力爆棚 | `fonts-net-cn/优设标题圆.zip` |
+| 站酷庆科黄油体 | 主标题/副标题 | 黄油质感，滑腻可爱 | `fonts-net-cn/站酷庆科黄油体.zip` |
+| 仓耳小丸子 | 正文/标签 | 圆滚滚丸子体，萌趣 | `fonts-net-cn/仓耳小丸子.zip` |
+| 小可奶酪体 | 标签/装饰 | 奶酪质感，甜美可爱 | `fonts-net-cn/小可奶酪体.zip` |
+| 猕猴桃圆 M | 正文 | 水果圆体，清新饱满 | `fonts-net-cn/猕猴桃圆 M.zip` |
+| 德拉黑体 | 主标题 | 超粗哥特黑，冲击力强 | `fonts-net-cn/德拉黑体.zip` |
+
+```css
+/* 多巴胺本地字体示例 @font-face */
+@font-face { font-family: '优设标题圆'; src: url('../fonts/fonts-net-cn/优设标题圆/YouSheBiaoTiYuan-2.otf'); }
+@font-face { font-family: '站酷庆科黄油体'; src: url('../fonts/fonts-net-cn/站酷庆科黄油体/ZhanKuQingKeHuangYouTi-2.ttf'); }
+@font-face { font-family: '仓耳小丸子'; src: url('../fonts/fonts-net-cn/仓耳小丸子/CangErXiaoWanZi-2.ttf'); }
+@font-face { font-family: '小可奶酪体'; src: url('../fonts/fonts-net-cn/小可奶酪体/XiaoKeNaiLaoTiShangYongMianFei@QingKeZiTi-2.ttf'); }
+@font-face { font-family: '猕猴桃圆'; src: url('../fonts/fonts-net-cn/猕猴桃圆 M/KiwiMaru-Medium-2.ttf'); }
+@font-face { font-family: '德拉黑体'; src: url('../fonts/fonts-net-cn/德拉黑体/DelaGothicOne-Regular-2.ttf'); }
+```
+> 多巴胺推荐组合：标题用「优设标题圆/站酷庆科黄油体」+ 正文用「猕猴桃圆/仓耳小丸子」+ 装饰标签用「小可奶酪体」
 
 ### 核心组件
 
@@ -717,6 +779,26 @@ Google Fonts 引入：
 ```
 > 得意黑适合知识卡主标题的替代选择，斜体设计增加动感
 
+**本地字体扩展（fonts-net-cn 精选）：**
+| 字体名 | 用途 | 效果 | zip路径 |
+|--------|------|------|---------|
+| 优设标题黑 | 主标题 | 超粗标题黑体，冲击力极强 | `fonts-net-cn/优设标题黑.zip` |
+| 庞门正道标题体 | 主标题 | 粗壮大标题，醒目硬朗 | `fonts-net-cn/庞门正道标题体免费版.zip` |
+| 标小智无界黑 | 正文/副标题 | 现代无界黑，科技感 | `fonts-net-cn/标小智无界黑.zip` |
+| 文道潮黑 | 副标题/标签 | 潮流黑体，年轻有力 | `fonts-net-cn/文道潮黑.zip` |
+| 创客贴金刚体 | 标题装饰 | 金刚力量感，超粗重量 | `fonts-net-cn/创客贴金刚体.zip` |
+| 思源黑体 Heavy | 正文 | 高质量黑体全字重 | `fonts-net-cn/思源黑体 Heavy.zip` |
+
+```css
+/* 知识卡本地字体示例 @font-face */
+@font-face { font-family: '优设标题黑'; src: url('../fonts/fonts-net-cn/优设标题黑/YouSheBiaoTiHei-2.ttf'); }
+@font-face { font-family: '庞门正道标题体'; src: url('../fonts/fonts-net-cn/庞门正道标题体免费版/PangMenZhengDaoBiaoTiTiMianFeiBan-2.ttf'); }
+@font-face { font-family: '标小智无界黑'; src: url('../fonts/fonts-net-cn/标小智无界黑/LogoSCUnboundedSans-Regular-2.ttf'); }
+@font-face { font-family: '文道潮黑'; src: url('../fonts/fonts-net-cn/文道潮黑/WenDaoChaoHei-2.ttf'); }
+@font-face { font-family: '创客贴金刚体'; src: url('../fonts/fonts-net-cn/创客贴金刚体/ChuangKeTieJinGangTi-2.otf'); }
+```
+> 知识卡推荐组合：大标题用「优设标题黑/庞门正道标题体」+ 副标题用「标小智无界黑」+ 正文用 Noto Sans SC
+
 ### 核心组件
 
 **超大装饰数字（.big-num）** — 知识卡的视觉锚点：
@@ -841,6 +923,25 @@ Google Fonts 引入：
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=ZCOOL+QingKe+HuangYou&family=ZCOOL+KuaiLe&family=Caveat:wght@500;700&family=Righteous&family=Pacifico&display=swap" />
 ```
+
+**本地字体扩展（fonts-net-cn 精选）：**
+| 字体名 | 用途 | 效果 | zip路径 |
+|--------|------|------|---------|
+| 仓耳舒圆体 W03 | 正文/副标题 | 柔软圆润，温暖亲切 | `fonts-net-cn/仓耳舒圆体W03.zip` |
+| 猕猴桃圆 M | 正文 | 水果感圆体，清新自然 | `fonts-net-cn/猕猴桃圆 M.zip` |
+| 千图小兔体 | 标签/装饰 | 卡通兔子体，可爱甜美 | `fonts-net-cn/千图小兔体.zip` |
+| 沐瑶软笔手写体 | 装饰/标注 | 柔软手写，温度感 | `fonts-net-cn/沐瑶软笔手写体.zip` |
+| 站酷庆科黄油体 | 主标题 | 黄油顺滑，和美食主题绝配 | `fonts-net-cn/站酷庆科黄油体.zip` |
+
+```css
+/* 美食本地字体示例 @font-face */
+@font-face { font-family: '仓耳舒圆体'; src: url('../fonts/fonts-net-cn/仓耳舒圆体W03/CangErShuYuanTiW03-2.ttf'); }
+@font-face { font-family: '猕猴桃圆'; src: url('../fonts/fonts-net-cn/猕猴桃圆 M/KiwiMaru-Medium-2.ttf'); }
+@font-face { font-family: '千图小兔体'; src: url('../fonts/fonts-net-cn/千图小兔体/千图小兔体.ttf'); }
+@font-face { font-family: '沐瑶软笔手写体'; src: url('../fonts/fonts-net-cn/沐瑶软笔手写体/Muyao-Softbrush-2.ttf'); }
+@font-face { font-family: '站酷庆科黄油体'; src: url('../fonts/fonts-net-cn/站酷庆科黄油体/ZhanKuQingKeHuangYouTi-2.ttf'); }
+```
+> 美食推荐组合：标题用「站酷庆科黄油体」+ 正文用「仓耳舒圆体/猕猴桃圆」+ 点缀用「沐瑶软笔手写体」
 
 ### 核心组件
 
@@ -983,6 +1084,25 @@ Google Fonts 引入：
 @font-face { font-family: 'Smiley Sans'; src: url('../fonts/SmileySans-Oblique.ttf'); }
 ```
 > 得意黑适合 AI 日报标题，斜体造型有科技动感
+
+**本地字体扩展（fonts-net-cn 精选）：**
+| 字体名 | 用途 | 效果 | zip路径 |
+|--------|------|------|---------|
+| 优设标题黑 | 主标题 | 超粗黑标题，科技冲击力 | `fonts-net-cn/优设标题黑.zip` |
+| 寒蝉高黑体 | 标题/副标题 | 高瘦科技风黑体 | `fonts-net-cn/寒蝉高黑体.zip` |
+| 标小智无界黑 | 正文/标签 | 现代无界黑，干净利落 | `fonts-net-cn/标小智无界黑.zip` |
+| 精品点阵体 | 装饰/代码 | 像素风，复古科技感 | `fonts-net-cn/精品点阵体.zip` |
+| 文道潮黑 | 副标题 | 潮流黑体，锐利有力 | `fonts-net-cn/文道潮黑.zip` |
+
+```css
+/* AI日报本地字体示例 @font-face */
+@font-face { font-family: '优设标题黑'; src: url('../fonts/fonts-net-cn/优设标题黑/YouSheBiaoTiHei-2.ttf'); }
+@font-face { font-family: '寒蝉高黑体'; src: url('../fonts/fonts-net-cn/寒蝉高黑体/HanChanGaoHeiTi-2.otf'); }
+@font-face { font-family: '标小智无界黑'; src: url('../fonts/fonts-net-cn/标小智无界黑/LogoSCUnboundedSans-Regular-2.ttf'); }
+@font-face { font-family: '精品点阵体'; src: url('../fonts/fonts-net-cn/精品点阵体/JingPinDianZhenTi7x7-2.ttf'); }
+@font-face { font-family: '文道潮黑'; src: url('../fonts/fonts-net-cn/文道潮黑/WenDaoChaoHei-2.ttf'); }
+```
+> AI日报推荐组合：标题用「优设标题黑/寒蝉高黑体」+ 标签用「标小智无界黑」+ 装饰数字用「精品点阵体」（像素风）
 
 ### 核心组件
 
