@@ -1,0 +1,11 @@
+{
+  "name": "vibeui-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node scrape-jsdesign.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}
