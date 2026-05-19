@@ -1,0 +1,95 @@
+{
+  "$schema": "./illustrations-config.schema.json",
+  "version": "1.0.0",
+  "description": "插画资源库配置 - 定义所有可用的插画库路径和分类映射",
+  "libraries": [
+    {
+      "id": "shigureni",
+      "name": "しぐれに（shigureni）",
+      "description": "日系 anime 风格少女角色插画",
+      "basePath": "/home/ts/下载/shigureni_插画合集/イラスト_插画",
+      "format": "png",
+      "style": "anime-character",
+      "totalCount": 116,
+      "categories": [
+        { "id": "other", "path": "その他_其他", "label": "其他/日常", "count": 92 },
+        { "id": "animal", "path": "動物_动物", "label": "动物", "count": 15 },
+        { "id": "beauty", "path": "美容_时尚", "label": "时尚", "count": 3 },
+        { "id": "cooking", "path": "料理_美食", "label": "美食", "count": 2 },
+        { "id": "daily", "path": "日常_生活", "label": "生活", "count": 2 },
+        { "id": "school", "path": "学校_学习", "label": "学习", "count": 1 },
+        { "id": "device", "path": "デバイス_设备", "label": "设备", "count": 1 }
+      ],
+      "filePattern": "*.png",
+      "compatibleStyles": ["knowledge", "food", "dopamine"],
+      "incompatibleStyles": ["ai-daily", "minimal", "guofeng"],
+      "displaySize": { "min": 120, "max": 200, "unit": "px" }
+    },
+    {
+      "id": "vectorshelf",
+      "name": "vectorshelf",
+      "description": "扁平矢量物件插画（无人物、纯物品）",
+      "basePath": "/home/ts/下载/vectorshelf_插画合集",
+      "format": "png",
+      "style": "flat-vector-object",
+      "totalCount": 4794,
+      "categories": [
+        { "id": "drink", "path": "Drink_饮品", "label": "饮品", "count": 449, "prefix": "dr" },
+        { "id": "food", "path": "Food_食物", "label": "食物", "count": 439, "prefix": "fo" },
+        { "id": "plants", "path": "Plants_植物", "label": "植物", "count": 984, "prefix": "pl" },
+        { "id": "goods", "path": "Goods_物品", "label": "物品", "count": 899, "prefix": "go" },
+        { "id": "other", "path": "Other_其他", "label": "其他", "count": 2007, "prefix": "ot" },
+        { "id": "letters", "path": "Letters_文字", "label": "文字", "count": 64, "prefix": "le" }
+      ],
+      "filePattern": "{prefix}{number}.png",
+      "compatibleStyles": ["food", "dopamine", "guofeng", "knowledge"],
+      "incompatibleStyles": ["ai-daily", "minimal"],
+      "displaySize": { "min": 80, "max": 180, "unit": "px" }
+    }
+  ],
+  "styleMapping": {
+    "food": {
+      "primary": ["vectorshelf:drink", "vectorshelf:food"],
+      "secondary": ["shigureni:cooking"],
+      "usage": "列表项图标(80px) / 标题装饰(120-160px)"
+    },
+    "dopamine": {
+      "primary": ["vectorshelf:drink", "vectorshelf:food", "vectorshelf:plants"],
+      "secondary": ["shigureni:other"],
+      "usage": "标题旁大图(160-180px) / 列表项图标(80px)"
+    },
+    "guofeng": {
+      "primary": ["vectorshelf:plants"],
+      "secondary": [],
+      "usage": "角落装饰(100-160px)，仅限东方花卉(梅花/樱花)"
+    },
+    "knowledge": {
+      "primary": ["shigureni:school", "shigureni:other"],
+      "secondary": ["vectorshelf:goods"],
+      "usage": "小型角落装饰(120px)，不占主空间"
+    },
+    "ai-daily": {
+      "primary": [],
+      "secondary": [],
+      "usage": "❌ 禁止使用任何插画"
+    },
+    "minimal": {
+      "primary": [],
+      "secondary": [],
+      "usage": "❌ 禁止使用任何插画"
+    }
+  },
+  "favorites": [
+    { "library": "vectorshelf", "id": "dr055", "name": "星冰乐", "tags": ["咖啡", "饮品", "夏日"] },
+    { "library": "vectorshelf", "id": "dr066", "name": "拿铁", "tags": ["咖啡", "日常"] },
+    { "library": "vectorshelf", "id": "dr007", "name": "咖啡杯碟", "tags": ["咖啡", "下午茶"] },
+    { "library": "vectorshelf", "id": "dr075", "name": "青柠汁", "tags": ["果汁", "清爽", "夏日"] },
+    { "library": "vectorshelf", "id": "dr034", "name": "外带杯", "tags": ["咖啡", "外卖"] },
+    { "library": "vectorshelf", "id": "dr018", "name": "牛奶瓶", "tags": ["牛奶", "早餐"] },
+    { "library": "vectorshelf", "id": "dr004", "name": "奶昔", "tags": ["甜品", "饮品"] },
+    { "library": "vectorshelf", "id": "pl129", "name": "梅与绣眼鸟", "tags": ["国潮", "梅花", "鸟"] },
+    { "library": "vectorshelf", "id": "pl081", "name": "樱花", "tags": ["国潮", "樱花", "春天"] },
+    { "library": "vectorshelf", "id": "fo034", "name": "草莓可丽饼", "tags": ["甜品", "草莓"] },
+    { "library": "vectorshelf", "id": "fo017", "name": "水果糖浆", "tags": ["水果", "甜品"] }
+  ]
+}
